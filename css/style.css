@@ -1,0 +1,41 @@
+@charset "utf-8";
+@font-face { font-family: 'GonganB'; src: url(../fonts/GonganB) format('opentype'); }
+body { 
+  font-family: GonganB;
+  color: #333;
+}
+
+html {
+  font-size: 10px;
+}
+header {
+  width: 100%;
+  padding: 3%;
+  position: fixed;
+}
+nav ul{
+  background: slategray;
+}
+nav ul li {
+  float: left;
+}
+nav ul li::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+main {
+  width: 100%;
+  height: auto;
+
+}
+
+footer {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+}
+footer .fa{
+  font-size: 3rem;
+  margin-right: 15px;
+}
