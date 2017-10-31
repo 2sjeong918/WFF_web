@@ -1,33 +1,47 @@
 @charset "utf-8";
-@font-face { font-family: 'GonganB'; src: url(../fonts/GonganB) format('opentype'); }
-body { 
+@font-face {
+  font-family: 'GonganB';
+  src: url(../fonts/GonganB) format('opentype', 'truetype');
+}
+
+body {
   font-family: GonganB;
-  color: #333;
+  color: #3e3a39;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 10px;
 }
+
 header {
   width: 100%;
   padding: 3%;
   position: fixed;
+  z-index: 100;
 }
-nav ul{
+
+nav ul {
   background: slategray;
 }
+
 nav ul li {
   float: left;
 }
+
+nav a {
+  color: #3e3a39;
+}
+
 nav ul li::after {
   content: '';
   display: block;
   clear: both;
 }
+
 main {
   width: 100%;
   height: auto;
-
 }
 
 footer {
@@ -35,7 +49,9 @@ footer {
   bottom: 5%;
   right: 3%;
 }
-footer .fa{
+
+footer .fa {
   font-size: 3rem;
   margin-right: 15px;
+  color: #3e3a39;
 }

@@ -1,25 +1,44 @@
 @charset "utf-8";
-
-.about-content div{
+.about-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.about-nav ul li {
+  margin-top: 10px;
+}
+.about-nav ul li a{
+  border-top: 3px solid #3e3a39;
+  text-decoration: none;
+  color: #3e3a39;
+}
+#intro, #wow-film, #professor, #film-committee, #sponsor{
   height: 100vh;
   /* background: skyblue; */
   padding: 3%;
+  border: 1px solid #333;
+  text-align: center;
 }
 .about-content h2{
-  padding-top: 80px;
+  margin-top: 80px;
   font-size: 4rem;
 }
+.about-content .bg{
+  position: sticky;
+  top: 0;
+  opacity: 0.5;
+  width: 100%;
+}
+#intro h2{
+  margin-top: 8%;
+}
 #intro img{
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  padding-top: 10%;
+  margin-top: 5%;
+  width: 80%;
+  border-top: 3px solid #3e3a39;
+  border-bottom: 3px solid #3e3a39;
+  padding: 20px;
 }
 #wow-film p{
-  padding-top: 10%;
-}
-#wow-film::after{
-  content: '';
-  display: block;
-  clear: both;
+  margin-top: 10%;
 }
