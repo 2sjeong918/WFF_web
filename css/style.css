@@ -1,0 +1,185 @@
+@charset "utf-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+@import url("./fonts.css");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: GonganB;
+  color: #3e3a39;
+}
+
+html {
+  font-size: 10px;
+}
+
+.readable-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+header {
+  width: 100%;
+  padding: 3%;
+  position: fixed;
+  z-index: 100;
+}
+
+.navigation a {
+  color: #3e3a39;
+}
+
+.menubar-container {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.btn-menubar {
+  background: transparent;
+  border: 0;
+  padding: 40px 0 0 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  outline-offset: -5px;
+}
+
+.menubar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: #3e3a39;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.menubar-act .menubar{
+  /* width: 110%; */
+}
+.menubar-top {
+  top: 0;
+}
+.menubar-act .menubar-top {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.menubar-middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menubar-act .menubar-middle {
+  transform: translate(-100%, -50%);
+}
+
+.menubar-bottom {
+  bottom: 0;
+}
+.menubar-act .menubar-bottom {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.main-menu {
+  /* background: skyblue; */
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateX(-100%) translateY(-50%);
+  /* transform: translateY(-100vh); */
+  /* transform: translate(-100% -50%); */
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.menu-act {
+  /* transform: translateX(0); */
+  transform: translateY(-50%);
+}
+
+.main-menu li {
+  /* background: yellow; */
+  font-size: 4rem;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.main-menu li a {
+  display: block;
+}
+
+.about-nav {
+  background-image: url("../imgs/about-nav-bg.svg");
+  background-repeat: no-repeat;
+}
+
+.wow-nav {
+  background-image: url("../imgs/wow-nav-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.films-nav {
+  background-image: url("../imgs/films-nav-bg.svg");
+  background-repeat: no-repeat;
+  background-position: 50px;
+}
+
+.poster-nav {
+  background-image: url("../imgs/poster-nav-bg.svg");
+  background-repeat: no-repeat;
+}
+
+.usb-nav {
+  background-image: url("../imgs/usb-nav-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.contact-nav {
+  background-image: url("../imgs/contact-nav-bg.svg");
+  background-repeat: no-repeat;
+}
+
+.about-nav:hover,
+.wow-nav:hover,
+.films-nav:hover,
+.poster-nav:hover,
+.usb-nav:hover,
+.contact-nav:hover {
+  transition: all 0.2s ease-in-out;
+  /* background-size: cover; */
+  background-position: center;
+}
+
+main {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+}
+
+footer .fa {
+  font-size: 3rem;
+  margin-right: 15px;
+  color: #3e3a39;
+}
