@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +16,8 @@
   <link rel="stylesheet" type="" href="./css/reset.css">
   <!-- 공통 스타일 -->
   <link rel="stylesheet" type="" href="./css/style.css">
-
-  <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
+
 <body>
   <header>
     <div class="row">
@@ -26,17 +25,21 @@
         <a href="./index.html"><img src="./imgs/logo.svg" alt="와우영상제 로고"></a>
       </div>
       <div class="col-md-offset-10 col-md-1">
-        <nav>
-          <a href="#">
-            <span>MENU</span>
-            <span class="glyphicon glyphicon-align-justify"></span>
-          </a>
-          <ul>
-            <li><a href="./about.html">ABOUT</a></li>
-            <li><a href="#">2017 WOW</a></li>
-            <li><a href="#">FILMS</a></li>
-            <li><a href="#">MOTION POSTER</a></li>
-            <li><a href="#">CONTACT</a></li>
+        <nav class="navigation">
+          <h2 class="readable-hidden">메인메뉴</h2>
+          <div class="menubar-container">
+            <button type="button" class="btn-menubar">메인메뉴 열기</button>
+            <span class="menubar menubar-top"></span>
+            <span class="menubar menubar-middle"></span>
+            <span class="menubar menubar-bottom"></span>
+          </div>
+          <ul class="main-menu">
+            <li class="about-nav"><a href="./about.html">ABOUT</a></li>
+            <li class="wow-nav"><a href="./wow.html">2017 WOW</a></li>
+            <li class="films-nav"><a href="./films.html">FILMS</a></li>
+            <li class="poster-nav"><a href="./poster.html">MOTION POSTER</a></li>
+            <li class="usb-nav"><a href="./usb.html">USB ORDER</a></li>
+            <li class="contact-nav"><a href="./contact.html">CONTACT</a></li>
           </ul>
         </nav>
       </div>
@@ -45,7 +48,7 @@
   <main>
     <div class="row">
       <div class="col-md-12">
-        interaction
+        <!-- interaction -->
       </div>
     </div>
   </main>
@@ -60,5 +63,9 @@
       <i class="fa fa-vimeo" aria-hidden="true"></i>
     </a>
   </footer>
+  <script src="./js/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="./js/main.js"></script>
 </body>
+
 </html>
