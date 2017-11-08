@@ -2,15 +2,15 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
   <title>와우영상제2017</title>
-  <!-- 합쳐지고 최소화된 최신 CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+ 
+ <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- 부가적인 테마 -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+ <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
   <!-- 브라우저 스타일 리셋 -->
   <link rel="stylesheet" type="" href="./css/reset.css">
   <!-- 공통 스타일 -->
@@ -18,7 +18,7 @@
 
   <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
   <style>
   html { 
     overflow:hidden;
@@ -39,11 +39,13 @@ background-blend-mode: */
     }
     .gif{
       position: absolute;
+
     }
     .firework{
       width:33%;
       left:18%;
       top:1%;
+      cursor:pointer;
     }
     .night{
       width:25%;
@@ -150,16 +152,18 @@ background-blend-mode: */
 <body>
   <div class="bg">
   <header>
-    <div class="container">
+    <!-- <div class="container">
     <div class="row">
-      <div class="col-xs-3 col-lg-1 logo">
-        <a href="./index.html"><img src="./imgs/logo.svg" alt="와우영상제 로고"></a>
-      </div>
-      <div class="col-lg-offset-10 col-lg-1">
+      <div class="col-xs-3 col-lg-1 logo"> -->
+      <a class="logo" href="./index.html"><img src="./imgs/logo.svg" alt="와우영상제 로고"></a>
+      <div class="hivcd"><img src="./imgs/hivcd.svg" alt="홍익시디 로고"></div>
+     <!--  </div> -->
+      <!-- <div class="col-lg-offset-10 col-lg-1"> -->
         <nav>
           <a href="#">
-            <span>MENU</span>
-            <span class="glyphicon glyphicon-align-justify"></span>
+            <img src="./imgs/menu.svg" alt="menu">
+            <!-- <span>MENU</span>
+            <span class="glyphicon glyphicon-align-justify"></span> -->
           </a>
 <!--           <ul>
             <li><a href="./about.html">ABOUT</a></li>
@@ -169,9 +173,9 @@ background-blend-mode: */
             <li><a href="#">CONTACT</a></li>
           </ul> -->
         </nav>
-      </div>
+<!--       </div>
     </div>
-  </div>
+  </div> -->
   </header>
   <main>
         <div class="gif night2"><img src="imgs/night_2.png" alt="wowff"></div>
@@ -184,11 +188,11 @@ background-blend-mode: */
         <div class="gif grid"><img src="imgs/grid_1.gif" alt="wowff"></div>
         <div class="gif particle1"><img src="imgs/particle_1.gif" alt="wowff"></div>
         <div class="gif particle"><img src="imgs/particle_1.png" alt="wowff"></div>
-        <a href="wow3.html"><div class="gif firework"><img src="imgs/firework_1.gif" alt="wowff" ></div></a>
+        <a href="firework.html"><div class="gif firework"><img src="imgs/firework_1.gif" alt="wowff" ></div></a>
         <div class="gif night"><img src="imgs/night_1.gif" alt="wowff"></div>
         <div class="gif diamond"><img src="imgs/diamond_1.gif" alt="wowff"></div>
         <div class="gif dot"><img src="imgs/dot_1.gif" alt="wowff"></div>
-        <div class="gif stripe"><img src="imgs/stripe_1.gif" alt="wowff"></div>
+        <a href="stripe.html"><div class="gif stripe"><img src="imgs/stripe_1.gif" alt="wowff"></div></a>
 
         <div class="gif s1"><img src="imgs/shape/1-07.svg" alt="wowff"></div>
         <div class="gif s2"><img src="imgs/shape/1-08.svg" alt="wowff"></div>
