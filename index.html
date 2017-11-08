@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,41 +15,188 @@
   <link rel="stylesheet" type="" href="./css/reset.css">
   <!-- 공통 스타일 -->
   <link rel="stylesheet" type="" href="./css/style.css">
-</head>
 
+  <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <style>
+  html { 
+    overflow:hidden;
+/*background: url("imgs/2.png") no-repeat center center fixed; 
+-webkit-background-size:100% auto;
+-moz-background-size: 100% auto;
+-o-background-size: 100% auto;
+background-size: 100% auto;
+background-blend-mode: */
+}
+    img {
+    
+    max-width: 100%; /* 이미지의 최대사이즈 */
+    min-width: 100%;
+    width /***/: auto; /* only IE8 */
+    height: auto;
+    vertical-align: bottom;
+    }
+    .gif{
+      position: absolute;
+    }
+    .firework{
+      width:33%;
+      left:18%;
+      top:1%;
+    }
+    .night{
+      width:25%;
+      left:45%;
+      bottom:5%;
+    }
+    .particle{
+      width:25%;
+      left:1%;
+      top:10%;
+    }
+    .diamond{
+      width:10%;
+      left:50%;
+      top:15%;
+    }
+    .particle1{
+      width:15%;
+      right:20%;
+      top:35%;
+    }
+    .dot{
+      width:10%;
+      left:14%;
+      bottom:-5%;
+    }
+    .grid{
+      width:10%;
+      top:10%;
+      right:10%;
+    }
+    .stripe{
+      width:13%;
+      top:-30% !important;
+      right:20%;
+    }
+    .stripe2{
+      width:6%;
+      bottom:5%;
+      right:6%;
+    }
+    .stripe3{
+      width:7%;
+      bottom:18%;
+      left:30%;
+    }
+    .night2{
+      width:8%;
+      bottom:-3%;
+      right:20%;
+    }
+    .grid2{
+      width:25%;
+      bottom:25%;
+      left:20%;
+    }
+    .shield{
+      width:15%;
+      left:0;
+      bottom:18%;
+    }
+    .shield2{
+      width:5%;
+      bottom:10%;
+      right:0;
+    }
+    .s1{
+      width:4%;
+      bottom: 20%;
+      right: 13%;
+    }
+    .s2{
+      width:12%;
+      top:40%;
+      left:53%;
+    }
+    .s3{
+      width:5%;
+      bottom:33%;
+      left:7%;
+    }
+    .s4{
+      width:7%;
+      left:20%;
+      bottom:-3%;
+    }
+    .s5{
+      width:5%;
+      bottom:0;
+      right:17%;
+    }
+    .s6{
+      width:1%;
+      right:10%;
+      top:20%;
+    }
+    .s7{
+      width:5%;
+      right:20%;
+      top:30%;
+    }
+  </style>
+</head>
 <body>
+  <div class="bg">
   <header>
+    <div class="container">
     <div class="row">
-      <div class="col-md-1 logo">
+      <div class="col-xs-3 col-lg-1 logo">
         <a href="./index.html"><img src="./imgs/logo.svg" alt="와우영상제 로고"></a>
       </div>
-      <div class="col-md-offset-10 col-md-1">
-        <nav class="navigation">
-          <h2 class="readable-hidden">메인메뉴</h2>
-          <div class="menubar-container">
-            <button type="button" class="btn-menubar">메인메뉴 열기</button>
-            <span class="menubar menubar-top"></span>
-            <span class="menubar menubar-middle"></span>
-            <span class="menubar menubar-bottom"></span>
-          </div>
-          <ul class="main-menu">
-            <li class="about-nav"><a href="./about.html">ABOUT</a></li>
-            <li class="wow-nav"><a href="./wow.html">2017 WOW</a></li>
-            <li class="films-nav"><a href="./films.html">FILMS</a></li>
-            <li class="poster-nav"><a href="./poster.html">MOTION POSTER</a></li>
-            <li class="usb-nav"><a href="./usb.html">USB ORDER</a></li>
-            <li class="contact-nav"><a href="./contact.html">CONTACT</a></li>
-          </ul>
+      <div class="col-lg-offset-10 col-lg-1">
+        <nav>
+          <a href="#">
+            <span>MENU</span>
+            <span class="glyphicon glyphicon-align-justify"></span>
+          </a>
+<!--           <ul>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="#">2017 WOW</a></li>
+            <li><a href="#">FILMS</a></li>
+            <li><a href="#">MOTION POSTER</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul> -->
         </nav>
       </div>
     </div>
+  </div>
   </header>
   <main>
-    <div class="row">
-      <div class="col-md-12">
-        <!-- interaction -->
-      </div>
-    </div>
+        <div class="gif night2"><img src="imgs/night_2.png" alt="wowff"></div>
+        <div class="gif grid2"><img src="imgs/shape/1-22.png" alt="wowff"></div>
+        <div class="gif shield"><img src="imgs/shape/1-26.png" alt="wowff"></div>
+        <div class="gif shield2"><img src="imgs/shape/1-25.png" alt="wowff"></div>
+        <div class="gif stripe2"><img src="imgs/shape/1-24.png" alt="wowff"></div>
+        <div class="gif stripe3"><img src="imgs/shape/1-23.png" alt="wowff"></div>
+
+        <div class="gif grid"><img src="imgs/grid_1.gif" alt="wowff"></div>
+        <div class="gif particle1"><img src="imgs/particle_1.gif" alt="wowff"></div>
+        <div class="gif particle"><img src="imgs/particle_1.png" alt="wowff"></div>
+        <a href="wow3.html"><div class="gif firework"><img src="imgs/firework_1.gif" alt="wowff" ></div></a>
+        <div class="gif night"><img src="imgs/night_1.gif" alt="wowff"></div>
+        <div class="gif diamond"><img src="imgs/diamond_1.gif" alt="wowff"></div>
+        <div class="gif dot"><img src="imgs/dot_1.gif" alt="wowff"></div>
+        <div class="gif stripe"><img src="imgs/stripe_1.gif" alt="wowff"></div>
+
+        <div class="gif s1"><img src="imgs/shape/1-07.svg" alt="wowff"></div>
+        <div class="gif s2"><img src="imgs/shape/1-08.svg" alt="wowff"></div>
+        <div class="gif s3"><img src="imgs/shape/1-09.svg" alt="wowff"></div>
+        <div class="gif s4"><img src="imgs/shape/1-10.svg" alt="wowff"></div>
+        <div class="gif s5"><img src="imgs/shape/1-20.svg" alt="wowff"></div>
+        <div class="gif s6"><img src="imgs/shape/1-21.svg" alt="wowff"></div>
+        <div class="gif s7"><img src="imgs/shape/1-20.svg" alt="wowff"></div>
   </main>
   <footer>
     <a href="">
@@ -63,9 +209,6 @@
       <i class="fa fa-vimeo" aria-hidden="true"></i>
     </a>
   </footer>
-  <script src="./js/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src="./js/main.js"></script>
+  </div>
 </body>
-
 </html>
