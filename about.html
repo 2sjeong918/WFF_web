@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>와우영상제2017</title>
+  <link rel="short icon" type="" href="http://hongiksidi.com/wow2015/wp-content/uploads/2015/11/icon.png">
+  <title>2017 와우영상제</title>
   <!-- 합쳐지고 최소화된 최신 CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <!-- fontawesome -->
@@ -18,10 +19,6 @@
   <link rel="stylesheet" type="" href="./css/style.css">
   <!-- about 스타일 -->
   <link rel="stylesheet" type="" href="./css/about.css">
-
-  <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -30,12 +27,26 @@
       <div class="col-md-1 logo">
         <a href="./index.html"><img src="./imgs/logo.svg" alt="와우영상제 로고"></a>
       </div>
-      <div class="col-md-offset-10 col-md-1">
-        <nav>
-          <a href="#">
-            <span>MENU</span>
-            <span class="glyphicon glyphicon-align-justify"></span>
-          </a>
+      <div class="col-md-offset-4 col-md-2 sub-logo">
+          <img src="./imgs/hivcd.svg" alt="홍익시디 로고">
+      </div>
+      <div class="col-md-offset-4 col-md-1">
+        <nav class="navigation">
+          <h2 class="readable-hidden">메인메뉴</h2>
+          <div class="menubar-container">
+            <button type="button" class="btn-menubar">메인메뉴 열기</button>
+            <span class="menubar menubar-top"></span>
+            <span class="menubar menubar-middle"></span>
+            <span class="menubar menubar-bottom"></span>
+          </div>
+          <ul class="main-menu">
+            <li class="about-nav"><a href="./about.html">ABOUT</a></li>
+            <li class="wow-nav"><a href="./wow.html">2017 WOW</a></li>
+            <li class="films-nav"><a href="./films.html">FILMS</a></li>
+            <li class="poster-nav"><a href="./poster.html">MOTION POSTER</a></li>
+            <li class="usb-nav"><a href="./usb.html">USB ORDER</a></li>
+            <li class="contact-nav"><a href="./contact.html">CONTACT</a></li>
+          </ul>
         </nav>
       </div>
     </div>
@@ -43,15 +54,13 @@
   <main>
     <div class="about-content">
       <div class="row">
-        <div class="about col-md-12">
-          <ul>
-            <li><a class="about-tab" href="#">00 ABOUT</a></li>
-            <li><a class="wow-tab" href="#">01 와우영상제</a></li>
-            <li class="professor-tab"><a href="#professor">02 지도교수진</a></li>
-            <li><a class="committee-tab" href="#">03 영상제 준비위원회</a></li>
-            <li><a class="sponsor-tab" href="#">04 스폰서</a></li>
-          </ul>
-        </div>
+        <ul class="about col-md-2">
+          <li><a class="intro-tab" href="#intro">ABOUT</a></li>
+          <li><a class="wow-tab" href="#wow">와우영상제</a></li>
+          <li class="professor-tab"><a href="#professor">지도교수진</a></li>
+          <li><a class="committee-tab" href="#committee">영상제 준비위원회</a></li>
+          <li><a class="sponsor-tab" href="#sponsor">스폰서</a></li>
+        </ul>
       </div>
       <div id="intro" class="row">
         <div class="col-md-12">
@@ -59,73 +68,140 @@
           <img src="./imgs/about-intro.svg " alt="와우영상제 레터링 이미지 ">
         </div>
       </div>
-      <div id="wow" class="row">
-        <div class="col-md-12">
-          <h2>
-            01 와우영상제
-          </h2>
-          <div class="row">
-            <div class="col-md-6">
-              <img src="./imgs/wow.svg" alt=" ">
-            </div>
-            <p class="col-md-6">
-              올해로 제 27회를 맞는 와우영상제 (WOWFF: WOW Film Festival) 에서는, 홍익대학교 시각디자인과 학생들이 학년과 장르에 관계없이 서로 1년 간 고민의 결과물을 공유하며 기념하는 자리입니다. 와우영상제는 홍익대학교 시각디자인과의 재학생, 졸업생, 그리고 영상을 사랑하는 사람들이라면 누구나 참여 가능한 영상제로 발전하고 있습니다. 또한 상영회 뿐만 아니라 분야별 전문가를 초청하여 부담없이 대화를 나누는 시간인 전야제, 우수 상영작을
-              시상하는 시상식 등 학생들의 감각으로 기획한 다양한 퍼포먼스들로 가득한 축제입니다. 보다 새롭게 단장한 27회 와우영상제, 오셔서 여러분을 위한 자리를 빛내주세요.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div id="professor" class="row">
-        <div class="col-md-12">
-          <h2>
-            02 지도교수진
-          </h2>
-          <div class="row">
-            <div class="col-md-4">
-              김현석
-            </div>
-            <div class="col-md-4">
-              올리버
-            </div>
-            <div class="col-md-4">
-              장인규
+      <div class="about-content-bg">
+        <div id="wow" class="row">
+          <div class="col-md-12">
+            <h2>
+              01 와우영상제
+            </h2>
+            <div class="row">
+              <div class="col-md-6">
+                <img src="./imgs/wow.svg" alt=" ">
+              </div>
+              <p class="col-md-5">
+                올해로 제 27회를 맞는 와우영상제 (WOWFF: WOW Film Festival) 에서는, 홍익대학교 시각디자인과 학생들이 학년과 장르에 관계없이 서로 1년 간 고민의 결과물을 공유하며 기념하는 자리입니다. 와우영상제는 홍익대학교 시각디자인과의 재학생, 졸업생, 그리고 영상을 사랑하는 사람들이라면 누구나 참여 가능한 영상제로 발전하고 있습니다. 또한 상영회 뿐만 아니라 분야별 전문가를 초청하여 부담없이 대화를 나누는 시간인 전야제, 우수 상영작을
+                시상하는 시상식 등 학생들의 감각으로 기획한 다양한 퍼포먼스들로 가득한 축제입니다. 보다 새롭게 단장한 27회 와우영상제, 오셔서 여러분을 위한 자리를 빛내주세요.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-      <div id="committee" class="row">
-        <div class="col-md-12 ">
-          <h2>
-            03 영상제 준비위원회
-          </h2>
+        <div id="professor" class="row">
+          <div class="col-md-offset-1 col-md-10">
+            <h2>
+              02 지도교수진
+            </h2>
+            <ul class="row">
+              <li class="professor col-md-4">
+                <img src="./imgs/hivcd.svg" alt="">
+                <p>김현석</p>
+              </li>
+              <li class="professor col-md-4">
+                <img src="./imgs/hivcd.svg" alt="">
+                <p>올리버</p>
+              </li>
+              <li class="professor col-md-4">
+                <img src="./imgs/hivcd.svg" alt="">
+                <p>장인규</p>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div id="sponsor" class="row">
-        <div class="col-md-12">
-          <h2>
-            04 스폰서
-          </h2>
+        <div id="committee" class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <h2>
+              03 영상제 준비위원회
+            </h2>
+            <ul class="committee-list">
+              <li>
+                <h3>위원장</h3>
+                <span>이경은</span>
+              </li>
+              <li>
+                <h3>부위원장</h3>
+                <span>이지민</span>
+              </li>
+              <li>
+                <ul class="row">
+                  <li class="col-md-3">
+                    <h3>운영 파트</h3>
+                    <span>계나영</span>
+                    <span>김본희</span>
+                    <span>박지혁</span>
+                    <span>이선호</span>
+                    <span>이응직</span>
+                    <span>장예진</span>
+                    <span>최유진</span>
+                  </li>
+                  <li class="col-md-3">
+                    <h3>영상 파트</h3>
+                    <span>김규민</span>
+                    <span>김한설</span>
+                    <span>남정현</span>
+                    <span>이예지</span>
+                    <span>정재빈</span>
+                    <span>한민석</span>
+                  </li>
+                  <li class="col-md-3">
+                    <h3>인쇄 파트</h3>
+                    <span>류지수</span>
+                    <span>우수민</span>
+                    <span>윤효영</span>
+                    <span>이경원</span>
+                    <span>이수아</span>
+                  </li>
+                  <li class="col-md-3">
+                    <h3>웹 파트</h3>
+                    <span>조애리</span>
+                    <span>김희진</span>
+                    <span>이소정</span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h3>아트디렉터</h3>
+                <span>김현진</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="sponsor" class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <h2>
+              04 스폰서
+            </h2>
+            <ul class="row">
+              <li class="col-md-3">
+                <img src="./imgs/artmix.svg" alt="">
+              </li>
+              <li class="col-md-3">
+                <img src="./imgs/remain.svg" alt="">
+              </li>
+              <li class="col-md-3">
+                <img src="./imgs/mass.svg" alt="">
+              </li>
+              <li class="col-md-3">
+                <img src="./imgs/mass.svg" alt="">
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </main>
   <footer>
-    <div class="row">
-      <div class="col-md-12">
-        <a href="">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-vimeo" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div>
+    <a href="https://www.facebook.com/wowfilmfestival/">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+    </a>
+    <a href="">
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+    </a>
+    <a href="">
+      <i class="fa fa-vimeo" aria-hidden="true"></i>
+    </a>
   </footer>
+  <script src="./js/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script src="./js/main.js"></script>
-
 </body>
 
 </html>
