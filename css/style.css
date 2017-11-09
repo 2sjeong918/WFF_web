@@ -31,13 +31,28 @@ html {
 
 header {
   width: 100%;
-  padding: 3%;
+  padding: 2%;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
 }
-
+.logo, .menubar-container{
+  z-index: 1000;
+}
+.logo img{
+  width: 90%;
+  margin-top: 5px;
+}
+.sub-logo {
+  text-align: center;
+}
+.sub-logo img{
+  margin-top: 5%;
+  width: 15%;
+}
 .navigation a {
   color: #3e3a39;
+  text-decoration: none;
+  /* color: #fff; */
 }
 
 .menubar-container {
@@ -63,16 +78,13 @@ header {
   left: 0;
   width: 100%;
   height: 4px;
-  border-radius: 2px;
+  /* border-radius: 2px; */
   background: #3e3a39;
   cursor: pointer;
-  transition: all 0.3s;
-}
-.menubar-act .menubar{
-  /* width: 110%; */
+  transition: all 0.2s ease-in-out;
 }
 .menubar-top {
-  top: 0;
+  top: 3px;
 }
 .menubar-act .menubar-top {
   top: 50%;
@@ -87,7 +99,7 @@ header {
 }
 
 .menubar-bottom {
-  bottom: 0;
+  bottom: 3px;
 }
 .menubar-act .menubar-bottom {
   top: 50%;
@@ -95,28 +107,34 @@ header {
 }
 
 .main-menu {
-  /* background: skyblue; */
+  background: #fff;
   position: fixed;
   top: 50%;
   left: 0;
   width: 100%;
-  transform: translateX(-100%) translateY(-50%);
+  z-index: 100;
+  /* height: 100vh; */
+  transform: translateY(-50%) translateX(100%);
   /* transform: translateY(-100vh); */
   /* transform: translate(-100% -50%); */
   text-align: center;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
 }
-
+.navigation::before{
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+}
 .menu-act {
-  /* transform: translateX(0); */
-  transform: translateY(-50%);
+  transform: translateX(0) translateY(-50%);
 }
 
 .main-menu li {
-  /* background: yellow; */
+  background-size: cover;
   font-size: 4rem;
   padding: 15px;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .main-menu li a {
@@ -124,47 +142,67 @@ header {
 }
 
 .about-nav {
-  background-image: url("../imgs/about-nav-bg.svg");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/about-nav-bg.svg");
   background-repeat: no-repeat;
 }
 
 .wow-nav {
-  background-image: url("../imgs/wow-nav-bg.svg");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/wow-nav-bg.svg");
+  background-color: rgba(255, 255, 255, 0.5);
   background-repeat: no-repeat;
   background-position: right;
 }
 
 .films-nav {
-  background-image: url("../imgs/films-nav-bg.svg");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/films-nav-bg.svg");
   background-repeat: no-repeat;
-  background-position: 50px;
+  /* background-position: 50px; */
 }
 
 .poster-nav {
-  background-image: url("../imgs/poster-nav-bg.svg");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/poster-nav-bg.svg");
   background-repeat: no-repeat;
 }
 
 .usb-nav {
-  background-image: url("../imgs/usb-nav-bg.svg");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/usb-nav-bg.svg");
   background-repeat: no-repeat;
   background-position: right;
 }
 
 .contact-nav {
-  background-image: url("../imgs/contact-nav-bg.svg");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/contact-nav-bg.svg");
   background-repeat: no-repeat;
 }
 
-.about-nav:hover,
-.wow-nav:hover,
-.films-nav:hover,
-.poster-nav:hover,
-.usb-nav:hover,
-.contact-nav:hover {
+/* 호버디자인 */
+
+.main-menu li:hover{
   transition: all 0.2s ease-in-out;
   /* background-size: cover; */
   background-position: center;
+  font-size: 4.3rem;
+}
+.main-menu li:hover a {
+  color: #fff001;
+}
+.about-nav:hover {
+  background-image: url("../imgs/about-nav-bg.svg");
+}
+.wow-nav:hover {
+  background-image: url("../imgs/wow-nav-bg.svg");
+}
+.films-nav:hover {
+  background-image: url("../imgs/films-nav-bg.svg");
+}
+.poster-nav:hover {
+  background-image: url("../imgs/poster-nav-bg.svg");
+}
+.usb-nav:hover {
+  background-image: url("../imgs/usb-nav-bg.svg");
+}
+.contact-nav:hover {
+  background-image: url("../imgs/contact-nav-bg.svg");
 }
 
 main {
