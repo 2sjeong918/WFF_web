@@ -1,15 +1,3 @@
-(function(global, $) {
-  'use strict';
-  $(document).ready(function() {
-
-    var about_tab = $('.about-tab');
-    var wow_tab = $('.wow-tab');
-    var professor_tab = $('.professor-tab');
-    var committee_tab = $('.committee-tab');
-    var sponsor_tab = $('.sponsor-tab');
-  })
-
-})//(window, window.jQuery);
 
 // 메뉴
 
@@ -35,5 +23,39 @@ $(document).ready(
       menu.removeClass('menu-act');
       container.removeClass('menubar-act');
     })
+  }
+);
+
+// about 탭
+
+$(document).ready(
+  function() {
+    var intro_tab = $('.intro-tab');
+    var wow_tab = $('.wow-tab');
+    var committee_tab = $('.committee-tab');
+    var sponsor_tab = $('.sponsor-tab');
+
+
+    var tab = $('.about li a');
+    
+    var act_tab = function() {
+      var tab_group = $(this).parent().siblings().children();
+      var scrollPosition = $($(this).attr('data-target')).offset().top;
+
+      if (tab_group.hasClass('about-act')) {
+        tab_group.removeClass('about-act');
+        $(this).addClass('about-act');
+        $('html, body').animate({
+          scrollTop: scrollPosition
+        });
+      }else{
+        $(this).addClass('about-act');
+        $('html, body').animate({
+          scrollTop: scrollPosition
+        });
+      }
+    }
+  
+    tab.click(act_tab);
   }
 );

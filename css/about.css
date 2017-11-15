@@ -2,6 +2,7 @@
 .about {
   position: fixed;
   top: 50%;
+  left: 10px;
   transform: translateY(-70%);
   z-index: 100;
 }
@@ -9,16 +10,27 @@
   margin-top: 10px;
 }
 .about li a {
+  display: block;
+  width: 20%;
+  padding-top: 10px;
   border-top: 3px solid #3e3a39;
   text-decoration: none;
   color: #3e3a39;
+  transition: all 0.2s ease-in-out;
 }
-.about li{
+.about li a:hover {
+  border-top-color: #fff101;
+}
+.about li a.about-act {
+  width: 30%;
+  border-top-color: #fff101;
+}
+/* .about li{
   counter-increment: number;
-}
-.about li::before{
+} */
+/* .about li::before{
   content: counter(number, decimal);
-}
+} */
 .about-content-bg{
   position: relative;
 }
@@ -27,7 +39,7 @@
   /* background: skyblue; */
   padding: 3%;
   text-align: center;
-  border: 1px solid #333;
+  /* border: 1px solid #333; */
 }
 .about-content h2 {
   margin-top: 80px;
@@ -50,30 +62,6 @@
   margin-top: 10%;
   line-height: 1.5;
 }
-
-
-/* #professor ul {
-  margin-top: 5%;
-}
-.professor {
-  position: relative;
-  height: 0;
-  padding-top: 30%;
-  background: yellow;
-  text-align: center;
-  overflow: hidden;
-}
-.professor img {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  transform: translateY(-50%);
-}
-.professor p {
-  margin-top: 20px;
-} */
-
 
 .committee-list{
   margin-top: 5%;
