@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+#wow img, .committee-list, #sponsor ul {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in;
+}
+#wow img.fade-in{
+  transform: translateY(0);
+  opacity: 1;
+}
+.committee-list.fade-in{
+  transform: translateY(0);
+  opacity: 1;
+}
+#sponsor ul.fade-in{
+  transform: translateY(0);
+  opacity: 1;
+}

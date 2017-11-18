@@ -1,7 +1,16 @@
 @charset "utf-8";
+.about-content-bg{
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/about-bg.svg");
+  background-color: #fff;
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .about {
   position: fixed;
   top: 50%;
+  left: 10px;
   transform: translateY(-70%);
   z-index: 100;
 }
@@ -9,57 +18,52 @@
   margin-top: 10px;
 }
 .about li a {
+  display: block;
+  width: 20%;
+  padding-top: 10px;
   border-top: 3px solid #3e3a39;
   text-decoration: none;
   color: #3e3a39;
+  transition: all 0.2s ease-in-out;
 }
-.about li{
-  counter-increment: number;
+.about li a:hover {
+  border-top-color: #fff101;
 }
-.about li::before{
-  content: counter(number, decimal);
+.about li a.about-act {
+  width: 30%;
+  border-top-color: #fff101;
 }
-#intro, #wow, #professor, #committee, #sponsor {
+#intro, #wow, #committee, #sponsor {
   height: 100vh;
-  /* background: skyblue; */
-  padding: 3%;
   text-align: center;
-  border: 1px solid #333;
+  /* background: skyblue; */
+  /* padding: 3%; */
+  /* border: 1px solid #333; */
+  /* background: #fff; */
+}
+.detail-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
 }
 .about-content h2 {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   font-size: 4rem;
 }
-.about-content-bg{
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../imgs/about-bg.svg");
-  background-position: top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#intro h2 {
-  margin-top: 8%;
-}
 #intro img {
-  margin-top: 5%;
   width: 80%;
-  border-top: 3px solid #3e3a39;
-  border-bottom: 3px solid #3e3a39;
-  padding: 20px;
 }
 #wow p {
   margin-top: 10%;
   line-height: 1.5;
 }
-#professor ul {
-  margin-top: 5%;
-}
-.professor img {
-  background: #3e3a39;
-}
-.professor p {
-  margin-top: 20px;
-}
+
 .committee-list{
   margin-top: 5%;
 }
@@ -73,13 +77,13 @@
   margin: 10px;
 }
 #sponsor ul {
-  margin-top: 20%;
+  margin-top: 10%;
   /* background: red; */
 }
 #sponsor li img {
   width: 60%;
-  position: relative;
-  top: 50%;
+  /* position: relative; */
+  /* top: 50%; */
   /* background: #3e3a39; */
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
 }

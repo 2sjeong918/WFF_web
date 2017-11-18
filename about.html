@@ -13,12 +13,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- 부가적인 테마 -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-  <!-- 브라우저 스타일 리셋 -->
-  <link rel="stylesheet" type="" href="./css/reset.css">
   <!-- 공통 스타일 -->
   <link rel="stylesheet" type="" href="./css/style.css">
-  <!-- about 스타일 -->
-  <link rel="stylesheet" type="" href="./css/about.css">
 </head>
 
 <body>
@@ -52,25 +48,24 @@
     </div>
   </header>
   <main>
-    <div class="about-content">
-      <div class="row">
-        <ul class="about col-md-2">
-          <li><a class="intro-tab" href="#intro">ABOUT</a></li>
-          <li><a class="wow-tab" href="#wow">와우영상제</a></li>
-          <li class="professor-tab"><a href="#professor">지도교수진</a></li>
-          <li><a class="committee-tab" href="#committee">영상제 준비위원회</a></li>
-          <li><a class="sponsor-tab" href="#sponsor">스폰서</a></li>
-        </ul>
-      </div>
-      <div id="intro" class="row">
-        <div class="col-md-12">
-          <h2>ABOUT</h2>
-          <img src="./imgs/about-intro.svg " alt="와우영상제 레터링 이미지 ">
+    <div class="about-content-bg">
+      <div class="about-content">
+        <div class="row">
+          <ul class="about col-md-2">
+            <li><a class="intro-tab" data-target="#intro" href="#"></a></li>
+            <li><a class="wow-tab" data-target="#wow" href="#"></a></li>
+            <li><a class="committee-tab" data-target="#committee" href="#"></a></li>
+            <li><a class="sponsor-tab" data-target="#sponsor" href="#"></a></li>
+          </ul>
         </div>
-      </div>
-      <div class="about-content-bg">
+        <div id="intro" class="row">
+          <div class="detail-content">
+            <h2 class="readable-hidden">ABOUT</h2>
+            <img src="./imgs/about-intro.svg " alt="about 레터링 이미지 ">
+          </div>
+        </div>
         <div id="wow" class="row">
-          <div class="col-md-12">
+          <div class="detail-content">
             <h2>
               01 와우영상제
             </h2>
@@ -85,31 +80,10 @@
             </div>
           </div>
         </div>
-        <div id="professor" class="row">
-          <div class="col-md-offset-1 col-md-10">
-            <h2>
-              02 지도교수진
-            </h2>
-            <ul class="row">
-              <li class="professor col-md-4">
-                <img src="./imgs/hivcd.svg" alt="">
-                <p>김현석</p>
-              </li>
-              <li class="professor col-md-4">
-                <img src="./imgs/hivcd.svg" alt="">
-                <p>올리버</p>
-              </li>
-              <li class="professor col-md-4">
-                <img src="./imgs/hivcd.svg" alt="">
-                <p>장인규</p>
-              </li>
-            </ul>
-          </div>
-        </div>
         <div id="committee" class="row">
-          <div class="col-md-10 col-md-offset-1">
+          <div class="detail-content">
             <h2>
-              03 영상제 준비위원회
+              02 영상제 준비위원회
             </h2>
             <ul class="committee-list">
               <li>
@@ -164,10 +138,10 @@
             </ul>
           </div>
         </div>
-        <div id="sponsor" class="row">
-          <div class="col-md-10 col-md-offset-1">
+        <div id="sponsor">
+          <div class="detail-content">
             <h2>
-              04 스폰서
+              03 스폰서
             </h2>
             <ul class="row">
               <li class="col-md-3">
@@ -189,7 +163,7 @@
     </div>
   </main>
   <footer>
-    <a href="https://www.facebook.com/wowfilmfestival/">
+    <a href="https://www.facebook.com/wowfilmfestival/" target="_blank">
       <i class="fa fa-facebook" aria-hidden="true"></i>
     </a>
     <a href="">
@@ -201,7 +175,10 @@
   </footer>
   <script src="./js/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/scroll.js"></script>
 </body>
 
 </html>

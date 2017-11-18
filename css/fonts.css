@@ -1,7 +1,13 @@
+@charset "utf-8";
 @font-face {
     font-family: 'GonganB';
     font-style: normal;
     src: url('../fonts/GonganB.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GonganR';
+    font-style: normal;
+    src: url('../fonts/GonganR.otf') format('opentype');
 }
 
 @font-face {

@@ -1,6 +1,21 @@
 @charset "utf-8";
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+@import url("./reset.css");
 @import url("./fonts.css");
+@import url("./about.css");
+@import url("./wow.css");
+@import url("./films.css");
+@import url("./poster.css");
+@import url("./usb.css");
+@import url("./contact.css");
+@import url("./parallax.css");
+
+@keyframes actcolor {
+  0% { background: #3e3a39; }
+  50% { background: #fff101; }
+  100% { background: #3e3a39; }
+}
+
 *,
 *::before,
 *::after {
@@ -29,6 +44,7 @@ html {
   width: 1px;
 }
 
+/* 헤더 */
 header {
   width: 100%;
   padding: 2%;
@@ -49,6 +65,9 @@ header {
   margin-top: 5%;
   width: 15%;
 }
+
+/* 네비게이션 */
+
 .navigation a {
   color: #3e3a39;
   text-decoration: none;
@@ -58,19 +77,19 @@ header {
 .menubar-container {
   position: absolute;
   width: 40px;
-  height: 40px;
+  height: 60px;
   overflow: hidden;
 }
 
 .btn-menubar {
   background: transparent;
   border: 0;
-  padding: 40px 0 0 0;
+  padding: 60px 0 0 0;
   margin: 0;
   width: 100%;
   height: 100%;
   cursor: pointer;
-  outline-offset: -5px;
+  outline-offset: 1px;
 }
 
 .menubar {
@@ -83,8 +102,20 @@ header {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+.menubar-container:hover .menubar{
+  /* background: #fff101; */
+  /* animation-name: actcolor;
+  animation-duration: 0.3s; */
+  animation: 0.3s ease-in-out 1 actcolor;
+}
+.menubar-container:hover .menubar-top{
+  transform: rotate(-200deg);
+}
+.menubar-container:hover .menubar-bottom{
+  transform: rotate(-200deg);
+}
 .menubar-top {
-  top: 3px;
+  top: 15px;
 }
 .menubar-act .menubar-top {
   top: 50%;
@@ -99,7 +130,7 @@ header {
 }
 
 .menubar-bottom {
-  bottom: 3px;
+  bottom: 15px;
 }
 .menubar-act .menubar-bottom {
   top: 50%;
@@ -107,46 +138,30 @@ header {
 }
 
 .main-menu {
-  background: #fff;
   position: fixed;
   top: 50%;
   left: 0;
   width: 100%;
   z-index: 100;
-  /* height: 100vh; */
   transform: translateY(-50%) translateX(100%);
-  /* transform: translateY(-100vh); */
-  /* transform: translate(-100% -50%); */
   text-align: center;
   transition: all 0.3s ease-in-out;
 }
-.navigation::before{
-  content: "";
-  width: 100%;
-  height: 100vh;
-  background: #fff;
-}
-.menu-act {
-  transform: translateX(0) translateY(-50%);
-}
-
-.main-menu li {
+.main-menu li{
+  transform: translateX(100%);
   background-size: cover;
   font-size: 4rem;
   padding: 15px;
   margin-top: 12px;
 }
-
-.main-menu li a {
-  display: block;
-}
-
 .about-nav {
+  transition: transform 0.3s ease-in-out;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/about-nav-bg.svg");
   background-repeat: no-repeat;
 }
 
 .wow-nav {
+  transition: transform 0.3s ease-in-out 0.2s;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/wow-nav-bg.svg");
   background-color: rgba(255, 255, 255, 0.5);
   background-repeat: no-repeat;
@@ -154,28 +169,44 @@ header {
 }
 
 .films-nav {
+  transition: transform 0.3s ease-in-out 0.4s;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/films-nav-bg.svg");
   background-repeat: no-repeat;
   /* background-position: 50px; */
 }
 
 .poster-nav {
+  transition: transform 0.3s ease-in-out 0.5s;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/poster-nav-bg.svg");
   background-repeat: no-repeat;
 }
 
 .usb-nav {
+  transition: transform 0.3s ease-in-out 0.6s;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/usb-nav-bg.svg");
   background-repeat: no-repeat;
   background-position: right;
 }
 
 .contact-nav {
+  transition: transform 0.3s ease-in-out 0.7s;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/contact-nav-bg.svg");
   background-repeat: no-repeat;
 }
+.menu-act {
+  transform: translateY(-50%) translateX(0);
+  background-color: #fff;
+  /* height: 100vh; */
+}
+.menu-act li{
+  transform: translateX(0);
+}
+.main-menu li a {
+  display: block;
+}
 
-/* 호버디자인 */
+
+/* 메인메뉴 호버디자인 */
 
 .main-menu li:hover{
   transition: all 0.2s ease-in-out;
@@ -184,7 +215,8 @@ header {
   font-size: 4.3rem;
 }
 .main-menu li:hover a {
-  color: #fff001;
+  color: #fff101;
+  text-shadow: 1px 0 0 #3e3a39, 0 1px 0 #3e3a39, -1px 0 0 #3e3a39, 0 -1px 0 #3e3a39;
 }
 .about-nav:hover {
   background-image: url("../imgs/about-nav-bg.svg");
