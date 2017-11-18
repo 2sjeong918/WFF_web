@@ -37,7 +37,7 @@ background-blend-mode: */
     height: auto;
     vertical-align: bottom;
     }
-    .gif{
+    .gif, .svg, .png{
       position: absolute;
 
     }
@@ -147,6 +147,90 @@ background-blend-mode: */
       right:20%;
       top:30%;
     }
+    .gif:hover{
+      transform:scale(1.1);
+      transition:all 0.4s;
+    }
+
+    /*animation*/
+/*
+  .s2{
+  animation: animationFrames ease-in-out 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: animationFrames ease-in-out 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: animationFrames ease-in-out 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: animationFrames ease-in-out 2s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: animationFrames ease-in-out 2s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+}
+
+@keyframes animationFrames{
+  0% {
+    transform:  translate(0px,73px)  ;
+  }
+  50% {
+    transform:  translate(236px,122px)  ;
+  }
+  100% {
+    transform:  translate(0px,73px)  ;
+  }
+}
+
+@-moz-keyframes animationFrames{
+  0% {
+    -moz-transform:  translate(0px,73px)  ;
+  }
+  50% {
+    -moz-transform:  translate(236px,122px)  ;
+  }
+  100% {
+    -moz-transform:  translate(0px,73px)  ;
+  }
+}
+
+@-webkit-keyframes animationFrames {
+  0% {
+    -webkit-transform:  translate(0px,73px)  ;
+  }
+  50% {
+    -webkit-transform:  translate(236px,122px)  ;
+  }
+  100% {
+    -webkit-transform:  translate(0px,73px)  ;
+  }
+}
+
+@-o-keyframes animationFrames {
+  0% {
+    -o-transform:  translate(0px,73px)  ;
+  }
+  50% {
+    -o-transform:  translate(236px,122px)  ;
+  }
+  100% {
+    -o-transform:  translate(0px,73px)  ;
+  }
+}
+
+@-ms-keyframes animationFrames {
+  0% {
+    -ms-transform:  translate(0px,73px)  ;
+  }
+  50% {
+    -ms-transform:  translate(236px,122px)  ;
+  }
+  100% {
+    -ms-transform:  translate(0px,73px)  ;
+  }
+}*/
   </style>
 </head>
 <body>
@@ -178,30 +262,35 @@ background-blend-mode: */
   </div> -->
   </header>
   <main>
-        <div class="gif night2"><img src="imgs/night_2.png" alt="wowff"></div>
-        <div class="gif grid2"><img src="imgs/shape/1-22.png" alt="wowff"></div>
-        <div class="gif shield"><img src="imgs/shape/1-26.png" alt="wowff"></div>
-        <div class="gif shield2"><img src="imgs/shape/1-25.png" alt="wowff"></div>
-        <div class="gif stripe2"><img src="imgs/shape/1-24.png" alt="wowff"></div>
-        <div class="gif stripe3"><img src="imgs/shape/1-23.png" alt="wowff"></div>
+        <div class="png night2"><img src="imgs/night_2.png" alt="wowff"></div>
+        <div class="png grid2"><img src="imgs/shape/1-22.png" alt="wowff"></div>
+        <div class="png shield"><img src="imgs/shape/1-26.png" alt="wowff"></div>
+        <div class="png shield2"><img src="imgs/shape/1-25.png" alt="wowff"></div>
+        <div class="png stripe2"><img src="imgs/shape/1-24.png" alt="wowff"></div>
+        <div class="png stripe3"><img src="imgs/shape/1-23.png" alt="wowff"></div>
+        <div class="png particle"><img src="imgs/particle_1.png" alt="wowff"></div>
+        
 
-        <div class="gif grid"><img src="imgs/grid_1.gif" alt="wowff"></div>
+        <a href="grid.html"><div class="gif grid"><img src="imgs/grid_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/grid_1.gif';" onmouseout="this.src='imgs/grid_1.gif';"></div></a>
         <div class="gif particle1"><img src="imgs/particle_1.gif" alt="wowff"></div>
-        <div class="gif particle"><img src="imgs/particle_1.png" alt="wowff"></div>
-        <a href="firework.html"><div class="gif firework"><img src="imgs/firework_1.gif" alt="wowff" ></div></a>
-        <div class="gif night"><img src="imgs/night_1.gif" alt="wowff"></div>
-        <div class="gif diamond"><img src="imgs/diamond_1.gif" alt="wowff"></div>
-        <div class="gif dot"><img src="imgs/dot_1.gif" alt="wowff"></div>
-        <a href="stripe.html"><div class="gif stripe"><img src="imgs/stripe_1.gif" alt="wowff"></div></a>
+        
+        <a href="fireworkcomp.html"><div class="gif firework"><img src="imgs/firework_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/firework_1.gif';" onmouseout="this.src='imgs/firework_1.gif';"></div></a>
+        <div class="gif night"><img src="imgs/night_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/night_1.gif';" onmouseout="this.src='imgs/night_1.gif';"></div>
+        <a href="diamond.html"><div class="gif diamond"><img src="imgs/diamond_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/diamond_1.gif';" onmouseout="this.src='imgs/diamond_1.gif';"></div></a>
+        <a href="ball.html"><div class="gif dot"><img src="imgs/dot_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/dot_1.gif';" onmouseout="this.src='imgs/dot_1.gif';"></div></a>
+        <a href="stripe.html"><div class="gif stripe"><img src="imgs/stripe_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/stripe_1.gif';" onmouseout="this.src='imgs/stripe_1.gif';"></div></a>
 
-        <div class="gif s1"><img src="imgs/shape/1-07.svg" alt="wowff"></div>
-        <div class="gif s2"><img src="imgs/shape/1-08.svg" alt="wowff"></div>
-        <div class="gif s3"><img src="imgs/shape/1-09.svg" alt="wowff"></div>
-        <div class="gif s4"><img src="imgs/shape/1-10.svg" alt="wowff"></div>
-        <div class="gif s5"><img src="imgs/shape/1-20.svg" alt="wowff"></div>
-        <div class="gif s6"><img src="imgs/shape/1-21.svg" alt="wowff"></div>
-        <div class="gif s7"><img src="imgs/shape/1-20.svg" alt="wowff"></div>
+        <div class="svg s1"><img src="imgs/shape/1-07.svg" alt="wowff"></div>
+        <div class="svg s2"><img src="imgs/shape/1-08.svg" alt="wowff"></div>
+        <div class="svg s3"><img src="imgs/shape/1-09.svg" alt="wowff"></div>
+        <div class="svg s4"><img src="imgs/shape/1-10.svg" alt="wowff"></div>
+        <div class="svg s5"><img src="imgs/shape/1-20.svg" alt="wowff"></div>
+        <div class="svg s6"><img src="imgs/shape/1-21.svg" alt="wowff"></div>
+        <div class="svg s7"><img src="imgs/shape/1-20.svg" alt="wowff"></div>
   </main>
+  <script>
+    
+  </script>
   <footer>
     <a href="">
       <i class="fa fa-facebook" aria-hidden="true"></i>

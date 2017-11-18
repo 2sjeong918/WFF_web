@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+<meta charset=UTF-8>
+<title>wow festival 2017</title>
+<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=css/reset.css>
+<link rel=stylesheet href=css/style.css>
+<style>html{overflow:hidden}</style>
+</head>
+<body>
+<header>
+<div class=wrapper>
+<a class=logo href=./index.html><img src=./imgs/logo2.svg alt="와우영상제 로고"></a>
+<div class=hivcd><img src=./imgs/hivcd2.svg alt="홍익시디 로고"></div>
+<nav>
+<a href=#>
+<img src=./imgs/menu.svg alt=menu>
+</a>
+</nav>
+</header>
+<canvas id=mycanvas style="position:absolute;top:0;left:0"></canvas>
+<div class=back onclick="page_back();" style="cursor: pointer;">
+<i class="fa fa-backward white" aria-hidden=true></i>
+</div>
+<footer class=white>
+<a href>
+<i class="fa fa-facebook" aria-hidden=true></i>
+</a>
+<a href>
+<i class="fa fa-instagram" aria-hidden=true></i>
+</a>
+<a href>
+<i class="fa fa-vimeo" aria-hidden=true></i>
+</a>
+</footer>
+</div>
+<script>
+function page_back(){
+history.go(-1)();
+}
+</script>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js></script>
+<script src=js/mainp.js></script>
+<script type=text/processing data-processing-target=mycanvas>
+boolean[][] occupied;
+particle[][] reference;
+PVector mouse;PVector pmouse;PVector mouseV;
+class particle{PVector location;PVector velocity;int radius=round(random(10,100));int opc=round(random(10,255));particle(int x,int y){location = new PVector(x,y);velocity = new PVector();occupied[x][y] = true;reference[x][y] = this;}void update(){int px = round(location.x);int py = round(location.y);PVector newLoc = PVector.add(location,velocity);int nx = round(newLoc.x);int ny = round(newLoc.y);if((px==nx&&py==ny)==false){if(nx<0||nx>=width){velocity.x *= -0.4;}else if(ny<0||ny>=height-200){velocity.y *= -0.6;}else{if(occupied[nx][ny]){PVector delta = PVector.sub(reference[nx][ny].velocity,velocity);delta.mult(0.1);velocity.add(delta);reference[nx][ny].velocity.sub(delta);}else{occupied[px][py] = false;occupied[nx][ny] = true;reference[nx][ny] = this;location = newLoc;}}}if(mousePressed){PVector arm = PVector.sub(mouse,location);float rad = 100;if(arm.mag()<rad){PVector delta = PVector.sub(mouseV,velocity);delta.mult((1-arm.mag()/rad));velocity.add(delta);}}velocity.y += 0.4;}void display() {stroke(0);fill(255,255,0);ellipse(location.x,location.y,radius,radius);}}particle[] field; int index=100; void setup(){size(screen.width,screen.height);occupied = new boolean[width][height];reference = new particle[width][height];field = new particle[index];for(int i=0;i<field.length;i++){int x = round(random(50,width));int y = round(random(50,height-200));field[i] = new particle(x,y);}}void draw(){fill(20,100);rect(0,0,width,height);pmouse = new PVector(pmouseX,pmouseY);mouse = new PVector(mouseX,mouseY);mouseV = PVector.sub(mouse,pmouse);for(int i=0;i<field.length;i++){field[i].update();field[i].display();}}</script>
+</body>
+</html>
