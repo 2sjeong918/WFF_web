@@ -28,7 +28,7 @@
       'triggerElement': trigger_el,
       'triggerHook': 0,
       // 'reverse': false,
-      'duration': 600,
+      'duration': 500,
       'offset': -500
     })
     .setClassToggle(trigger_el, 'fade-in')

@@ -1,4 +1,12 @@
 @charset "utf-8";
+.about-content-bg{
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/about-bg.svg");
+  background-color: #fff;
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .about {
   position: fixed;
   top: 50%;
@@ -25,38 +33,31 @@
   width: 30%;
   border-top-color: #fff101;
 }
-/* .about li{
-  counter-increment: number;
-} */
-/* .about li::before{
-  content: counter(number, decimal);
-} */
-.about-content-bg{
-  position: relative;
-}
 #intro, #wow, #committee, #sponsor {
   height: 100vh;
-  /* background: skyblue; */
-  padding: 3%;
   text-align: center;
+  /* background: skyblue; */
+  /* padding: 3%; */
   /* border: 1px solid #333; */
+  /* background: #fff; */
+}
+.detail-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
 }
 .about-content h2 {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   font-size: 4rem;
 }
-.about-content-bg{
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../imgs/about-bg.svg");
-  background-color: #fff;
-  background-position: top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 #intro img {
-  margin-top: 15%;
   width: 80%;
-  padding: 20px;
 }
 #wow p {
   margin-top: 10%;
@@ -76,13 +77,13 @@
   margin: 10px;
 }
 #sponsor ul {
-  margin-top: 20%;
+  margin-top: 10%;
   /* background: red; */
 }
 #sponsor li img {
   width: 60%;
-  position: relative;
-  top: 50%;
+  /* position: relative; */
+  /* top: 50%; */
   /* background: #3e3a39; */
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
 }

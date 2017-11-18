@@ -115,7 +115,7 @@ header {
   transform: rotate(-200deg);
 }
 .menubar-top {
-  top: 12px;
+  top: 15px;
 }
 .menubar-act .menubar-top {
   top: 50%;
@@ -130,7 +130,7 @@ header {
 }
 
 .menubar-bottom {
-  bottom: 12px;
+  bottom: 15px;
 }
 .menubar-act .menubar-bottom {
   top: 50%;
@@ -215,7 +215,7 @@ header {
   font-size: 4.3rem;
 }
 .main-menu li:hover a {
-  color: #fff100;
+  color: #fff101;
   text-shadow: 1px 0 0 #3e3a39, 0 1px 0 #3e3a39, -1px 0 0 #3e3a39, 0 -1px 0 #3e3a39;
 }
 .about-nav:hover {
