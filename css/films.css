@@ -1,0 +1,24 @@
+@charset "utf-8";
+.films-content-bg{
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/films-bg.svg");
+  background-color: #fff;
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.films-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+}
+.films-content h2 {
+  font-size: 4rem;
+}
+#films-intro, #film01, #film02, #film03, #film04 {
+  height: 100vh;
+  text-align: center;
+}
+#films-intro img {
+  width: 70%;
+}
