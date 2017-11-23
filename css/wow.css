@@ -36,9 +36,10 @@
   border-top-color: #fff101;
 }
 .wow-content {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
   background: #fff;
+  padding: 0 10%;
 }
 .wow-content h2 {
   /* margin-top: 80px; */
@@ -47,7 +48,6 @@
 .wow-content p {
   text-align: left;
   font-size: 2rem;
-  padding: 10px;
 }
 
 #wow-intro, #keynote, #main-poster, #promotion-film, #eve-festival {
@@ -56,10 +56,10 @@
   /* padding: 3%; */
 }
 #wow-intro img {
-  width: 80%;
+  width: 100%;
 }
 #keynote p {
-  padding: 5%;
+  /* padding: 5%; */
 
 }
 #main-poster img, #eve-festival img {

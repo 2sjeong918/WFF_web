@@ -1,6 +1,6 @@
 @charset "utf-8";
 .films-content-bg{
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/films-bg.svg");
+  background-image: url("../imgs/films-bg.svg");
   background-color: #fff;
   background-position: top;
   background-attachment: fixed;
@@ -8,9 +8,9 @@
   background-size: cover;
 }
 .films-content {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
-  background: #fff;
+  /* background: #fff; */
 }
 .films-content h2 {
   font-size: 4rem;

@@ -16,7 +16,7 @@
     $.data( this, "scrollCheck", setTimeout(function() {
       $('.about-content-bg').css( {"backgroundImage" :"linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../imgs/about-bg.svg')"});
       $('.wow-content-bg').css( {"backgroundImage" :"linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../imgs/wow-bg.svg')"});
-      $('.films-content-bg').css( {"backgroundImage" :"linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../imgs/films-bg.svg')"});
+      $('.films-content-bg').css( {"backgroundImage" :"url('../imgs/films-bg.svg')"});
       $('.usb-content-bg').css( {"backgroundImage" :"linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../imgs/usb-bg.svg')"});
     }, 500) );
   });

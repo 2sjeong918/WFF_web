@@ -8,8 +8,9 @@
   background-size: cover;
 }
 .usb-content {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
+  padding: 0 10%;
   background: #fff;
 }
 #usb-intro, #order {
@@ -18,4 +19,36 @@
 }
 #usb-intro img {
   width: 70%;
+}
+#order {
+  padding: 10%;
+  position: relative;
+}
+
+#order img{
+  float: right;
+
+}
+.order-detail {
+  float: left;
+  font-size: 2rem;
+  text-align: left;
+  font-family: GonganB;
+}
+.order-detail p {
+  margin-bottom: 10px;
+}
+.order-detail button {
+  border: 3px solid #3e3a39;
+  border-radius: 0;
+  background: #fff;
+  font-family: GonganB;
+  color: #3e3a39;
+  position: absolute;
+  padding: 20px 10%;
+  bottom: 0;
+  cursor: pointer;
+}
+.order-detail button:hover {
+  background: #fff101;
 }

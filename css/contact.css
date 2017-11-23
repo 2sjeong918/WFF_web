@@ -1,28 +1,31 @@
 @charset "utf-8";
+.contact-content::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#contact-intro{
+  float: left;
+  width: 50%;
+  height: 100vh;
+  text-align: center;
+}
+#contact-intro img{
+  width: 70%;
+}
 .rwd-map {
   overflow: hidden;
   position: relative;
   max-width: 100%;
   height: 0;
 }
-
-.rwd-map.is-4x3 {
-  padding-bottom: 75%;
-}
-
 .rwd-map.is-16x9 {
   padding-bottom: 100vh;
 }
-
-.rwd-map.is-21x9 {
-  padding-bottom: 42.8571%;
-}
-
 .rwd-map iframe {
   position: absolute;
   top: 0;
-  left: 50%;
-  width: 50%;
+  width: 100%;
   height: 100%;
   border: none;
 }

@@ -8,7 +8,8 @@
   background-size: cover;
 }
 .poster-content {
-  max-width: 900px;
+  max-width: 980px;
+  padding: 0 10%;
   margin: 0 auto;
   background: #fff;
 }
