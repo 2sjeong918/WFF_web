@@ -37,6 +37,7 @@ $(document).ready(
 
 
     var tab = $('.about li a');
+    var scroll_down = $('.fa-angle-down');
     
     var act_tab = function() {
       var tab_group = $(this).parent().siblings().children();
@@ -57,5 +58,6 @@ $(document).ready(
     }
   
     tab.click(act_tab);
+    scroll_down.click(act_tab)
   }
 );

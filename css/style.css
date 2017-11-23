@@ -24,12 +24,15 @@
 }
 
 body {
-  font-family: GonganB;
+  font-family: GonganR;
   color: #3e3a39;
 }
 
 html {
   font-size: 10px;
+}
+h2, h3 {
+  font-family: GonganB;
 }
 
 .readable-hidden {
@@ -46,24 +49,30 @@ html {
 
 /* 헤더 */
 header {
+  /* background: skyblue; */
   width: 100%;
   padding: 2%;
   position: fixed;
   z-index: 1000;
 }
+.logo {
+  float: left;
+  width: 30%;
+}
 .logo, .menubar-container{
   z-index: 1000;
 }
 .logo img{
-  width: 90%;
-  margin-top: 5px;
+  width: 20%;
 }
 .sub-logo {
   text-align: center;
+  float: left;
+  width: 40%;
 }
 .sub-logo img{
-  margin-top: 5%;
-  width: 15%;
+  margin-top: 7px;
+  width: 7%;
 }
 
 /* 네비게이션 */
@@ -71,13 +80,13 @@ header {
 .navigation a {
   color: #3e3a39;
   text-decoration: none;
-  /* color: #fff; */
 }
 
 .menubar-container {
   position: absolute;
   width: 40px;
   height: 60px;
+  right: 30px;
   overflow: hidden;
 }
 
@@ -139,23 +148,26 @@ header {
 
 .main-menu {
   position: fixed;
-  top: 50%;
+  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-  transform: translateY(-50%) translateX(100%);
+  transform: translateX(100%);
   text-align: center;
   transition: all 0.3s ease-in-out;
+  padding-top: 7%;
 }
 .main-menu li{
   transform: translateX(100%);
   background-size: cover;
+  font-family: GonganB;
   font-size: 4rem;
-  padding: 15px;
-  margin-top: 12px;
+  padding: 1.3%;
+  margin-top: 1%;
 }
 .about-nav {
-  transition: transform 0.3s ease-in-out;
+  transition: transform  0.3s ease-in-out;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/about-nav-bg.svg");
   background-repeat: no-repeat;
 }
@@ -194,7 +206,7 @@ header {
   background-repeat: no-repeat;
 }
 .menu-act {
-  transform: translateY(-50%) translateX(0);
+  transform: translateX(0);
   background-color: #fff;
   /* height: 100vh; */
 }
@@ -246,6 +258,7 @@ footer {
   position: fixed;
   bottom: 5%;
   right: 3%;
+  z-index: 1000;
 }
 
 footer .fa {

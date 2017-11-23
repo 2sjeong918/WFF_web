@@ -1,11 +1,18 @@
 @charset "utf-8";
+.graphic {
+  z-index: -1;
+}
 .about-content-bg{
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/about-bg.svg");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../imgs/about-bg.svg");
   background-color: #fff;
   background-position: top;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.about-content-bg{
+  fill: tomato;
+  fill-rule: evenodd;
 }
 .about {
   position: fixed;
@@ -13,6 +20,7 @@
   left: 10px;
   transform: translateY(-70%);
   z-index: 100;
+  width: 20%;
 }
 .about li {
   margin-top: 10px;
@@ -36,6 +44,7 @@
 #intro, #wow, #committee, #sponsor {
   height: 100vh;
   text-align: center;
+  overflow: hidden;
   /* background: skyblue; */
   /* padding: 3%; */
   /* border: 1px solid #333; */
@@ -45,7 +54,7 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  
+  /* background: skyblue; */
 }
 .about-content {
   max-width: 900px;
@@ -53,22 +62,53 @@
   background: #fff;
 }
 .about-content h2 {
-  /* margin-top: 80px; */
   font-size: 4rem;
 }
 #intro img {
   width: 80%;
 }
-#wow p {
+#intro .graphic {
+  position: absolute;
+  /* height: 80%; */
+  right: -100px;
+  bottom: 0px;
+}
+#intro span {
+  font-size: 5rem;
+  position: absolute;
+  bottom: 15%;
+  cursor: pointer;
+}
+#wow {
+  padding: 5%;
+}
+#wow .graphic {
+  position: absolute;
+  width: 50%;
+  left: 100px;
+  top: -100px;
+  transform: rotate(100deg);
+}
+#wow .wow-img {
+  float: left;
   margin-top: 10%;
+  padding-right: 5%;
+}
+#wow p {
+  margin-top: 12%;
   line-height: 1.5;
+  font-size: 2rem;
+  text-align: left;
+  white-space:normal;
 }
 
 .committee-list{
   margin-top: 5%;
+  font-size: 2rem;
 }
 .committee-list span{
   display: block;
+  margin-top: 10px;
 }
 .committee-list ul {
   border-top: 1px solid #3e3a39;
@@ -76,12 +116,38 @@
   padding: 20px;
   margin: 10px;
 }
+.committee-list ul li {
+  float: left;
+  width: 25%;
+}
+.committee-list ul::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+#sponsor h2 {
+  /* margin-top: -20%; */
+  /* padding-bottom: 15%; */
+}
 #sponsor ul {
-  margin-top: 10%;
-  /* background: red; */
+  padding-top: 20%;
+}
+#sponsor li {
+  float: left;
+  width: 25%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  /* background: skyblue; */
+  padding: 30px;
+}
+#sponsor li::after{
+  content: '';
+  display: block;
+  clear: both;
 }
 #sponsor li img {
-  width: 60%;
+  /* width: 60%; */
   /* position: relative; */
   /* top: 50%; */
   /* background: #3e3a39; */
