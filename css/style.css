@@ -1,64 +1,240 @@
 @charset "utf-8";
-@font-face {
-  font-family: 'GonganB';
-  src: url(../fonts/GonganB) format('opentype', 'truetype');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+@import url("./reset.css");
+@import url("./fonts.css");
+@import url("./about.css");
+@import url("./wow.css");
+@import url("./films.css");
+@import url("./poster.css");
+@import url("./usb.css");
+@import url("./contact.css");
+@import url("./parallax.css");
+
+@keyframes actcolor {
+  0% { background: #3e3a39; }
+  50% { background: #fff101; }
+  100% { background: #3e3a39; }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  
 }
 
 body {
   font-family: GonganB;
   color: #3e3a39;
-  box-sizing: border-box;
 }
 
 html {
   font-size: 10px;
 }
 
+.readable-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* 헤더 */
 header {
   width: 100%;
+  padding: 2%;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
 }
-.logo{
-  padding-left: 30px;
-  min-width:5%;
-  max-width:5%;
-  position: fixed;
-  top:3%;
-  left:3%;
+.logo, .menubar-container{
+  z-index: 1000;
 }
-.hivcd{
-  min-width:2%;
-  max-width:2%;
-  position: fixed;
-  top:3%;
-  left:50%;
-  /*transform: translate(-50%, -50%);*/
+.logo img{
+  width: 90%;
+  margin-top: 5px;
 }
-nav{
-  min-width:3%;
-  max-width:3%;
-  position: fixed;
-  right:3%;
-  top:3%;
+.sub-logo {
+  text-align: center;
+}
+.sub-logo img{
+  margin-top: 5%;
+  width: 15%;
 }
 
-nav ul {
-  background: slategray;
-}
+/* 네비게이션 */
 
-nav ul li {
-  float: left;
-}
-
-nav a {
+.navigation a {
   color: #3e3a39;
+  text-decoration: none;
+  /* color: #fff; */
 }
 
-nav ul li::after {
-  content: '';
+.menubar-container {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.btn-menubar {
+  background: transparent;
+  border: 0;
+  padding: 60px 0 0 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  outline-offset: 1px;
+}
+
+.menubar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  /* border-radius: 2px; */
+  background: #3e3a39;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.menubar-container:hover .menubar{
+  /* background: #fff101; */
+  /* animation-name: actcolor;
+  animation-duration: 0.3s; */
+  animation: 0.3s ease-in-out 1 actcolor;
+}
+.menubar-container:hover .menubar-top{
+  transform: rotate(-200deg);
+}
+.menubar-container:hover .menubar-bottom{
+  transform: rotate(-200deg);
+}
+.menubar-top {
+  top: 15px;
+}
+.menubar-act .menubar-top {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.menubar-middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menubar-act .menubar-middle {
+  transform: translate(-100%, -50%);
+}
+
+.menubar-bottom {
+  bottom: 15px;
+}
+.menubar-act .menubar-bottom {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.main-menu {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transform: translateY(-50%) translateX(100%);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.main-menu li{
+  transform: translateX(100%);
+  background-size: cover;
+  font-size: 4rem;
+  padding: 15px;
+  margin-top: 12px;
+}
+.about-nav {
+  transition: transform 0.3s ease-in-out;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/about-nav-bg.svg");
+  background-repeat: no-repeat;
+}
+
+.wow-nav {
+  transition: transform 0.3s ease-in-out 0.2s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/wow-nav-bg.svg");
+  background-color: rgba(255, 255, 255, 0.5);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.films-nav {
+  transition: transform 0.3s ease-in-out 0.4s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/films-nav-bg.svg");
+  background-repeat: no-repeat;
+  /* background-position: 50px; */
+}
+
+.poster-nav {
+  transition: transform 0.3s ease-in-out 0.5s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/poster-nav-bg.svg");
+  background-repeat: no-repeat;
+}
+
+.usb-nav {
+  transition: transform 0.3s ease-in-out 0.6s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/usb-nav-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.contact-nav {
+  transition: transform 0.3s ease-in-out 0.7s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/contact-nav-bg.svg");
+  background-repeat: no-repeat;
+}
+.menu-act {
+  transform: translateY(-50%) translateX(0);
+  background-color: #fff;
+  /* height: 100vh; */
+}
+.menu-act li{
+  transform: translateX(0);
+}
+.main-menu li a {
   display: block;
-  clear: both;
+}
+
+
+/* 메인메뉴 호버디자인 */
+
+.main-menu li:hover{
+  transition: all 0.2s ease-in-out;
+  /* background-size: cover; */
+  background-position: center;
+  font-size: 4.3rem;
+}
+.main-menu li:hover a {
+  color: #fff101;
+  text-shadow: 1px 0 0 #3e3a39, 0 1px 0 #3e3a39, -1px 0 0 #3e3a39, 0 -1px 0 #3e3a39;
+}
+.about-nav:hover {
+  background-image: url("../imgs/about-nav-bg.svg");
+}
+.wow-nav:hover {
+  background-image: url("../imgs/wow-nav-bg.svg");
+}
+.films-nav:hover {
+  background-image: url("../imgs/films-nav-bg.svg");
+}
+.poster-nav:hover {
+  background-image: url("../imgs/poster-nav-bg.svg");
+}
+.usb-nav:hover {
+  background-image: url("../imgs/usb-nav-bg.svg");
+}
+.contact-nav:hover {
+  background-image: url("../imgs/contact-nav-bg.svg");
 }
 
 main {
@@ -71,30 +247,9 @@ footer {
   bottom: 5%;
   right: 3%;
 }
-.back{
-  position: fixed;
-  bottom: 5%;
-  left: 3%;
-  padding-left: 30px;
-  font-size: 3rem;
-  margin-right: 15px;
-  color: #3e3a39;
-}
-.back .white{
-  color: #727171;
-}
+
 footer .fa {
   font-size: 3rem;
   margin-right: 15px;
   color: #3e3a39;
-}
-footer.white .fa {
-  font-size: 3rem;
-  margin-right: 15px;
-  color: #727171;
-}
-footer.white2 .fa {
-  font-size: 3rem;
-  margin-right: 15px;
-  color: #c9c9ca;
 }

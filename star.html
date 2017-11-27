@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">  
+<meta charset="UTF-8">
+<link rel="short icon" type="" href="http://hongiksidi.com/wow2015/wp-content/uploads/2015/11/icon.png">
+<title>와우영상제2017</title>
+<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=css/reset.css>
+<link rel=stylesheet href=css/landing.css>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js></script>
+<script src="star.js"></script>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <a href="./index.html"><img src="./imgs/logo-g.svg" alt="와우영상제 로고"></a>
+  </div>
+  <div class="sub-logo">
+    <img src="./imgs/hivcd-g.svg" alt="홍익시디 로고">
+  </div>
+  <nav class="navigation">
+    <h2 class="readable-hidden">메인메뉴</h2>
+    <div class="menubar-container">
+      <button type="button" class="btn-menubar">메인메뉴 열기</button>
+      <span class="menubar w menubar-top"></span>
+      <span class="menubar w menubar-middle"></span>
+      <span class="menubar w menubar-bottom"></span>
+    </div>
+    <ul class="main-menu">
+      <li class="about-nav"><a href="./about.html">ABOUT</a></li>
+      <li class="wow-nav"><a href="./wow.html">2017 WOW</a></li>
+      <li class="films-nav"><a href="./films.html">FILMS</a></li>
+      <li class="poster-nav"><a href="./poster.html">MOTION POSTER</a></li>
+      <li class="usb-nav"><a href="./usb.html">USB ORDER</a></li>
+      <li class="contact-nav"><a href="./contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  </header>
+<canvas id="canvas" style="position: absolute;left: 0;top:0;width:100%;height:100%;background:#000;"></canvas>
+<div class="footerleft">
+    <div class="back" onclick="page_back();" style="cursor: pointer;">
+      <i class="fa fa-backward white" aria-hidden="true"></i>
+    </div>
+    <div class="tooltip" style="cursor: pointer;">
+      <i class="fa fa-question-circle white" aria-hidden="true"></i>
+      <span class="tooltiptext">방향키로 우주선을 조종하세요. 스페이스바로 미사일을 발사해 부서지는 별들의 결을 느껴보세요. 뾰족한 별에 부딪히면 우주선은 폭파됩니다!</span>
+    </div>
+</div>
+<footer>
+    <a href="https://www.facebook.com/wowfilmfestival/" target="_blank">
+      <i class="fa fa-facebook white" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.instagram.com/wowff2017" target="_blank">
+      <i class="fa fa-instagram white" aria-hidden="true"></i>
+    </a>
+    <a href="https://vimeo.com/hivcdwowff" target="_blank">
+      <i class="fa fa-vimeo white" aria-hidden="true"></i>
+    </a>
+ </footer>
+ <script src="./js/main.js"></script>
+<script>
+function page_back(){
+history.go(-1)();
+}
+</script>
+</body>
+</html>

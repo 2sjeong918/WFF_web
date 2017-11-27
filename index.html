@@ -1,265 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
   <meta charset="UTF-8">
- <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <link rel="short icon" type="" href="http://hongiksidi.com/wow2015/wp-content/uploads/2015/11/icon.png">
   <title>와우영상제2017</title>
- 
- <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
-  <!-- fontawesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- 부가적인 테마 -->
- <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
-  <!-- 브라우저 스타일 리셋 -->
   <link rel="stylesheet" type="" href="./css/reset.css">
-  <!-- 공통 스타일 -->
-  <link rel="stylesheet" type="" href="./css/style.css">
-
-  <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+  <link rel="stylesheet" href="./css/landing.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!--   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
-  <style>
-  html { 
-    overflow:hidden;
-/*background: url("imgs/2.png") no-repeat center center fixed; 
--webkit-background-size:100% auto;
--moz-background-size: 100% auto;
--o-background-size: 100% auto;
-background-size: 100% auto;
-background-blend-mode: */
-}
-    img {
-    
-    max-width: 100%; /* 이미지의 최대사이즈 */
-    min-width: 100%;
-    width /***/: auto; /* only IE8 */
-    height: auto;
-    vertical-align: bottom;
-    }
-    .gif, .svg, .png{
-      position: absolute;
-
-    }
-    .firework{
-      width:33%;
-      left:18%;
-      top:1%;
-      cursor:pointer;
-    }
-    .night{
-      width:25%;
-      left:45%;
-      bottom:5%;
-    }
-    .particle{
-      width:25%;
-      left:1%;
-      top:10%;
-    }
-    .diamond{
-      width:10%;
-      left:50%;
-      top:15%;
-    }
-    .particle1{
-      width:15%;
-      right:20%;
-      top:35%;
-    }
-    .dot{
-      width:10%;
-      left:14%;
-      bottom:-5%;
-    }
-    .grid{
-      width:10%;
-      top:10%;
-      right:10%;
-    }
-    .stripe{
-      width:13%;
-      top:-30% !important;
-      right:20%;
-    }
-    .stripe2{
-      width:6%;
-      bottom:5%;
-      right:6%;
-    }
-    .stripe3{
-      width:7%;
-      bottom:18%;
-      left:30%;
-    }
-    .night2{
-      width:8%;
-      bottom:-3%;
-      right:20%;
-    }
-    .grid2{
-      width:25%;
-      bottom:25%;
-      left:20%;
-    }
-    .shield{
-      width:15%;
-      left:0;
-      bottom:18%;
-    }
-    .shield2{
-      width:5%;
-      bottom:10%;
-      right:0;
-    }
-    .s1{
-      width:4%;
-      bottom: 20%;
-      right: 13%;
-    }
-    .s2{
-      width:12%;
-      top:40%;
-      left:53%;
-    }
-    .s3{
-      width:5%;
-      bottom:33%;
-      left:7%;
-    }
-    .s4{
-      width:7%;
-      left:20%;
-      bottom:-3%;
-    }
-    .s5{
-      width:5%;
-      bottom:0;
-      right:17%;
-    }
-    .s6{
-      width:1%;
-      right:10%;
-      top:20%;
-    }
-    .s7{
-      width:5%;
-      right:20%;
-      top:30%;
-    }
-    .gif:hover{
-      transform:scale(1.1);
-      transition:all 0.4s;
-    }
-
-    /*animation*/
-/*
-  .s2{
-  animation: animationFrames ease-in-out 2s;
-  animation-iteration-count: infinite;
-  transform-origin: 50% 50%;
-  -webkit-animation: animationFrames ease-in-out 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-transform-origin: 50% 50%;
-  -moz-animation: animationFrames ease-in-out 2s;
-  -moz-animation-iteration-count: infinite;
-  -moz-transform-origin: 50% 50%;
-  -o-animation: animationFrames ease-in-out 2s;
-  -o-animation-iteration-count: infinite;
-  -o-transform-origin: 50% 50%;
-  -ms-animation: animationFrames ease-in-out 2s;
-  -ms-animation-iteration-count: infinite;
-  -ms-transform-origin: 50% 50%;
-}
-
-@keyframes animationFrames{
-  0% {
-    transform:  translate(0px,73px)  ;
-  }
-  50% {
-    transform:  translate(236px,122px)  ;
-  }
-  100% {
-    transform:  translate(0px,73px)  ;
-  }
-}
-
-@-moz-keyframes animationFrames{
-  0% {
-    -moz-transform:  translate(0px,73px)  ;
-  }
-  50% {
-    -moz-transform:  translate(236px,122px)  ;
-  }
-  100% {
-    -moz-transform:  translate(0px,73px)  ;
-  }
-}
-
-@-webkit-keyframes animationFrames {
-  0% {
-    -webkit-transform:  translate(0px,73px)  ;
-  }
-  50% {
-    -webkit-transform:  translate(236px,122px)  ;
-  }
-  100% {
-    -webkit-transform:  translate(0px,73px)  ;
-  }
-}
-
-@-o-keyframes animationFrames {
-  0% {
-    -o-transform:  translate(0px,73px)  ;
-  }
-  50% {
-    -o-transform:  translate(236px,122px)  ;
-  }
-  100% {
-    -o-transform:  translate(0px,73px)  ;
-  }
-}
-
-@-ms-keyframes animationFrames {
-  0% {
-    -ms-transform:  translate(0px,73px)  ;
-  }
-  50% {
-    -ms-transform:  translate(236px,122px)  ;
-  }
-  100% {
-    -ms-transform:  translate(0px,73px)  ;
-  }
-}*/
-  </style>
+<!--   <script src="js/prefixfree.min.js"></script> -->
 </head>
 <body>
-  <div class="bg">
-  <header>
-    <!-- <div class="container">
-    <div class="row">
-      <div class="col-xs-3 col-lg-1 logo"> -->
-      <a class="logo" href="./index.html"><img src="./imgs/logo.svg" alt="와우영상제 로고"></a>
-      <div class="hivcd"><img src="./imgs/hivcd.svg" alt="홍익시디 로고"></div>
-     <!--  </div> -->
-      <!-- <div class="col-lg-offset-10 col-lg-1"> -->
-        <nav>
-          <a href="#">
-            <img src="./imgs/menu.svg" alt="menu">
-            <!-- <span>MENU</span>
-            <span class="glyphicon glyphicon-align-justify"></span> -->
-          </a>
-<!--           <ul>
-            <li><a href="./about.html">ABOUT</a></li>
-            <li><a href="#">2017 WOW</a></li>
-            <li><a href="#">FILMS</a></li>
-            <li><a href="#">MOTION POSTER</a></li>
-            <li><a href="#">CONTACT</a></li>
-          </ul> -->
-        </nav>
-<!--       </div>
+<script>
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+if (isMobile()) {
+    location.replace("http://aeree.dothome.co.kr/wff/mobile.html");
+}
+</script>
+<script type="text/javascript">
+$(window).load(function() {
+// setTimeout(function() { console.log('Works!'}, 3000);      
+     $('#loading').hide();  
+    });
+</script>
+<div id="loading">
+  <div id="box"><img id="loading-image" src="imgs/wow.gif" alt="Loading..." /></div>
+</div>
+<header>
+  <div class="logo">
+    <a href="./index.html"><img src="./imgs/logo.svg" alt="와우영상제 로고"></a>
+  </div>
+  <div class="sub-logo">
+    <img src="./imgs/hivcd.svg" alt="홍익시디 로고">
+  </div>
+  <nav class="navigation">
+    <h2 class="readable-hidden">메인메뉴</h2>
+    <div class="menubar-container">
+      <button type="button" class="btn-menubar">메인메뉴 열기</button>
+      <span class="menubar menubar-top"></span>
+      <span class="menubar menubar-middle"></span>
+      <span class="menubar menubar-bottom"></span>
     </div>
-  </div> -->
+    <ul class="main-menu">
+      <li class="about-nav"><a href="./about.html">ABOUT</a></li>
+      <li class="wow-nav"><a href="./wow.html">2017 WOW</a></li>
+      <li class="films-nav"><a href="./films.html">FILMS</a></li>
+      <li class="poster-nav"><a href="./poster.html">MOTION POSTER</a></li>
+      <li class="usb-nav"><a href="./usb.html">USB ORDER</a></li>
+      <li class="contact-nav"><a href="./contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
   </header>
   <main>
         <div class="png night2"><img src="imgs/night_2.png" alt="wowff"></div>
@@ -269,13 +63,11 @@ background-blend-mode: */
         <div class="png stripe2"><img src="imgs/shape/1-24.png" alt="wowff"></div>
         <div class="png stripe3"><img src="imgs/shape/1-23.png" alt="wowff"></div>
         <div class="png particle"><img src="imgs/particle_1.png" alt="wowff"></div>
-        
+        <div class="png particle1"><img src="imgs/particle_2.png" alt="wowff"></div>
 
         <a href="grid.html"><div class="gif grid"><img src="imgs/grid_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/grid_1.gif';" onmouseout="this.src='imgs/grid_1.gif';"></div></a>
-        <div class="gif particle1"><img src="imgs/particle_1.gif" alt="wowff"></div>
-        
-        <a href="fireworkcomp.html"><div class="gif firework"><img src="imgs/firework_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/firework_1.gif';" onmouseout="this.src='imgs/firework_1.gif';"></div></a>
-        <div class="gif night"><img src="imgs/night_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/night_1.gif';" onmouseout="this.src='imgs/night_1.gif';"></div>
+        <a href="firework.html"><div class="gif firework"><img src="imgs/firework_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/firework_1.gif';" onmouseout="this.src='imgs/firework_1.gif';"></div></a>
+        <a href="star.html"><div class="gif night"><img src="imgs/night_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/night_1.gif';" onmouseout="this.src='imgs/night_1.gif';"></div></a>
         <a href="diamond.html"><div class="gif diamond"><img src="imgs/diamond_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/diamond_1.gif';" onmouseout="this.src='imgs/diamond_1.gif';"></div></a>
         <a href="ball.html"><div class="gif dot"><img src="imgs/dot_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/dot_1.gif';" onmouseout="this.src='imgs/dot_1.gif';"></div></a>
         <a href="stripe.html"><div class="gif stripe"><img src="imgs/stripe_1.gif" alt="wowff" onmouseover="this.src='imgs/gifyellow/stripe_1.gif';" onmouseout="this.src='imgs/stripe_1.gif';"></div></a>
@@ -288,20 +80,18 @@ background-blend-mode: */
         <div class="svg s6"><img src="imgs/shape/1-21.svg" alt="wowff"></div>
         <div class="svg s7"><img src="imgs/shape/1-20.svg" alt="wowff"></div>
   </main>
-  <script>
-    
-  </script>
+
   <footer>
-    <a href="">
+    <a href="https://www.facebook.com/wowfilmfestival/" target="_blank">
       <i class="fa fa-facebook" aria-hidden="true"></i>
     </a>
-    <a href="">
+    <a href="https://www.instagram.com/wowff2017" target="_blank">
       <i class="fa fa-instagram" aria-hidden="true"></i>
     </a>
-    <a href="">
+    <a href="https://vimeo.com/hivcdwowff" target="_blank">
       <i class="fa fa-vimeo" aria-hidden="true"></i>
     </a>
   </footer>
-  </div>
+  <script src="./js/main.js"></script>
 </body>
 </html>

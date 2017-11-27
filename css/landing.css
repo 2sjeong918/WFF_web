@@ -1,0 +1,610 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'GonganB';
+  src: url(../fonts/GonganB) format('opentype', 'truetype');
+}
+@font-face {
+  font-family: 'GonganL';
+  src: url(../fonts/GonganL) format('opentype', 'truetype');
+}
+@font-face {
+  font-family: 'GonganR';
+  src: url(../fonts/GonganR) format('opentype', 'truetype');
+}
+#loading {
+ width: 100%;  
+ height: 100%;  
+ top: 0px;
+ left: 0px;
+ position: fixed;  
+ display: block;    
+ background-color: #fff;  
+ z-index: 99;  
+ text-align: center; } 
+ #box{
+position: absolute; 
+width:20%;
+height:20%; 
+ top: 50%;  
+ left: 50%; 
+ transform: translate(-50%, -50%);
+ z-index: 100;
+ }
+  
+#loading-image {  
+ z-index: 200; }
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: GonganR;
+  color: #3e3a39;
+}
+
+html {
+  font-size: 10px;
+  overflow: hidden;
+}
+h2, h3 {
+  font-family: GonganB;
+}
+
+.readable-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* 데스크탑 */
+@media screen and (min-width:980px){
+  /* 헤더 */
+  header {
+    /* background: skyblue; */
+    width: 100%;
+    padding: 2%;
+    position: fixed;
+    z-index: 1000;
+  }
+  .logo {
+    float: left;
+    width: 30%;
+  }
+  .logo, .menubar-container{
+    z-index: 1000;
+  }
+  .logo img{
+    max-width: 20% !important;
+    min-width: 20% !important;
+  }
+  .sub-logo {
+    text-align: center;
+    float: left;
+    width: 40%;
+  }
+  .sub-logo img{
+    margin-top: 7px;
+    max-width: 7% !important;
+    min-width: 7% !important;
+  }
+  .main-menu{
+    padding-top: 7%;
+  }
+  .main-menu li{
+    padding: 1.3%;
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width:979px){
+  header {
+    /* background: skyblue; */
+    width: 100%;
+    padding: 2%;
+    position: fixed;
+    z-index: 1000;
+  }
+  .logo {
+    float: left;
+    width: 30%;
+    margin-top: 15px;
+  }
+  .logo, .menubar-container{
+    z-index: 1000;
+  }
+  .logo img{
+    max-width: 75px;
+    max-width: 50% !important;
+    min-width: 50% !important;
+  }
+  .sub-logo {
+    text-align: center;
+    float: left;
+    width: 40%;
+    margin-top: 15px;
+  }
+  .sub-logo img{
+ /*   max-width: 40px;
+    width: 20%;*/
+    max-width: 20% !important;
+    min-width: 20% !important;
+  }
+  .main-menu{
+    padding-top: 30%;
+  }
+  .main-menu li{
+    padding: 3%;
+  }
+}
+
+/* 네비게이션 */
+
+.navigation a {
+  color: #3e3a39;
+  text-decoration: none;
+}
+
+.menubar-container {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  right: 5%;
+  overflow: hidden;
+}
+
+.btn-menubar {
+  background: transparent;
+  border: 0;
+  padding: 60px 0 0 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  outline-offset: 1px;
+}
+
+.menubar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  /* border-radius: 2px; */
+  background: #3e3a39;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.menubar.w{
+  background:#727171 !important;
+}
+.menubar-container:hover .menubar{
+  /* background: #fff101; */
+  /* animation-name: actcolor;
+  animation-duration: 0.3s; */
+  animation: 0.3s ease-in-out 1 actcolor;
+}
+.menubar-container:hover .menubar-top{
+  transform: rotate(-200deg);
+}
+.menubar-container:hover .menubar-bottom{
+  transform: rotate(-200deg);
+}
+.menubar-top {
+  top: 15px;
+}
+.menubar-act .menubar-top {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.menubar-middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menubar-act .menubar-middle {
+  transform: translate(-100%, -50%);
+}
+
+.menubar-bottom {
+  bottom: 15px;
+}
+.menubar-act .menubar-bottom {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.main-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transform: translateX(100%);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  /* padding-top: 7%; */
+}
+.main-menu li{
+  transform: translateX(100%);
+  background-size: cover;
+  font-family: GonganB;
+  font-size: 4rem;
+  /* padding: 1.3%; */
+  margin-top: 1%;
+}
+.about-nav {
+  transition: transform  0.3s ease-in-out;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/about-nav-bg.svg");
+  background-repeat: no-repeat;
+}
+
+.wow-nav {
+  transition: transform 0.3s ease-in-out 0.2s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/wow-nav-bg.svg");
+  background-color: rgba(255, 255, 255, 0.5);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.films-nav {
+  transition: transform 0.3s ease-in-out 0.4s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/films-nav-bg.svg");
+  background-repeat: no-repeat;
+  /* background-position: 50px; */
+}
+
+.poster-nav {
+  transition: transform 0.3s ease-in-out 0.5s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/poster-nav-bg.svg");
+  background-repeat: no-repeat;
+}
+
+.usb-nav {
+  transition: transform 0.3s ease-in-out 0.6s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/usb-nav-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.contact-nav {
+  transition: transform 0.3s ease-in-out 0.7s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/contact-nav-bg.svg");
+  background-repeat: no-repeat;
+}
+.menu-act {
+  transform: translateX(0);
+  background-color: #fff;
+  /* height: 100vh; */
+}
+.menu-act li{
+  transform: translateX(0);
+}
+.main-menu li a {
+  display: block;
+}
+
+
+/* 메인메뉴 호버디자인 */
+
+.main-menu li:hover{
+  transition: all 0.2s ease-in-out;
+  /* background-size: cover; */
+  background-position: center;
+  font-size: 4.3rem;
+}
+.main-menu li:hover a {
+  color: #fff101;
+  text-shadow: 1px 0 0 #3e3a39, 0 1px 0 #3e3a39, -1px 0 0 #3e3a39, 0 -1px 0 #3e3a39;
+}
+.about-nav:hover {
+  background-image: url("../imgs/about-nav-bg.svg");
+}
+.wow-nav:hover {
+  background-image: url("../imgs/wow-nav-bg.svg");
+}
+.films-nav:hover {
+  background-image: url("../imgs/films-nav-bg.svg");
+}
+.poster-nav:hover {
+  background-image: url("../imgs/poster-nav-bg.svg");
+}
+.usb-nav:hover {
+  background-image: url("../imgs/usb-nav-bg.svg");
+}
+.contact-nav:hover {
+  background-image: url("../imgs/contact-nav-bg.svg");
+}
+
+main {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  z-index: 1000;
+}
+
+footer .fa {
+  font-size: 3rem;
+  margin-right: 15px;
+  color: #3e3a39;
+}
+
+.footerleft{
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+}
+.back{
+  float: left;
+  font-size: 3rem;
+  color: #3e3a39;
+}
+.white{
+  color: #727171 !important;
+}
+.sound{
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  font-size: 3rem; 
+  color: #3e3a39;
+  z-index: 100;
+  cursor: pointer;
+}
+.tooltip{
+  float: left;
+  padding-left: 30px;
+  font-size: 3rem;
+  color: #3e3a39;
+  z-index: 100
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200%;
+    background-color:#fff;
+    border:2px solid #3e3a39;
+    color:#3e3a39;
+    font-size: 1.5rem;
+    font-family: 'GonganL';
+    line-height: 2rem;
+    padding: 15px;
+    position: absolute;
+    z-index: 999;
+    bottom: 120%;
+    left: 50%;
+
+    word-break: keep-all;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+
+
+    img {
+   max-width: 100%; /* 이미지의 최대사이즈 */
+    min-width: 100%;
+    width /***/: auto; /* only IE8 */
+    height: auto;
+    vertical-align: bottom;
+    }
+    .gif, .svg, .png{
+      position: absolute;
+
+    }
+    .firework{
+      width:33%;
+      left:18%;
+      top:1%;
+      cursor:pointer;
+    }
+    .night{
+      width:25%;
+      left:45%;
+      bottom:5%;
+    }
+    .particle{
+      width:25%;
+      left:1%;
+      top:10%;
+    }
+    .diamond{
+      width:10%;
+      left:50%;
+      top:15%;
+    }
+    .particle1{
+      width:15%;
+      right:20%;
+      top:35%;
+    }
+    .dot{
+      width:10%;
+      left:14%;
+      bottom:-5%;
+    }
+    .grid{
+      width:10%;
+      top:10%;
+      right:10%;
+    }
+    .stripe{
+      width:13%;
+      top:-30% !important;
+      right:20%;
+    }
+    .stripe2{
+      width:6%;
+      bottom:5%;
+      right:6%;
+    }
+    .stripe3{
+      width:7%;
+      bottom:18%;
+      left:30%;
+    }
+    .night2{
+      width:8%;
+      bottom:-3%;
+      right:20%;
+    }
+    .grid2{
+      width:25%;
+      bottom:25%;
+      left:20%;
+    }
+    .shield{
+      width:15%;
+      left:0;
+      bottom:18%;
+    }
+    .shield2{
+      width:5%;
+      bottom:10%;
+      right:0;
+    }
+    .s1{
+      width:4%;
+      bottom: 20%;
+      right: 13%;
+    }
+    .s2{
+      width:12%;
+      top:40%;
+      left:53%;
+      animation: s3 20s infinite;
+    }
+    .s3{
+      width:5%;
+      bottom:33%;
+      left:7%;
+      animation: s1 10s infinite;
+    }
+    .s4{
+      width:7%;
+      left:20%;
+      bottom:-3%;
+      animation: s2 7s infinite;
+    }
+    .s5{
+      width:5%;
+      bottom:0;
+      right:17%;
+    }
+    .s6{
+      width:1%;
+      right:10%;
+      top:20%;
+      animation: s5 2s ease-in infinite;
+    }
+    .s7{
+      width:5%;
+      right:20%;
+      top:30%;
+      animation: s4 6s infinite;
+    }
+    .gif:hover{
+      transform:scale(1.1);
+      transition:all 0.4s;
+    }
+
+@keyframes s1 {
+  0% {
+    bottom:28%;
+  }
+  50%{
+    bottom:40%;
+  }
+  100% {
+    bottom:28%;
+  }
+}
+@keyframes s2 {
+  0% {
+    left:20%;
+    bottom:-3%;
+  }
+  50%{
+    left:40%;
+    bottom:5%;
+  }
+  100% {
+    left:20%;
+    bottom:-3%;
+  }
+}
+ @keyframes s5 {
+  0% {
+      right:10%;
+      top:20%;
+  }
+  50%{
+      right:2%;
+      top:20%;
+  }
+  100% {
+      right:10%;
+      top:20%;
+  }
+}  @keyframes s4 {
+  0% {
+      right:20%;
+      top:30%;
+  }
+  50%{
+      right:5%;
+      top:50%;
+  }
+  100% {
+     right:20%;
+      top:30%;
+  }
+}
+
+@keyframes s3 {
+  0% {
+    width:12%;
+    top:38%;
+      left:47%;
+  }
+  25%{
+    width:11%;
+     top:45%;
+    left:55%;
+  }
+  50%{
+    width:12%;
+       top:50%;
+    left:45%;
+
+  }
+  75%{
+    width:11%;
+    top:45%;
+    left:55%;
+  }
+  100% {
+    width:12%;
+     top:38%;
+      left:47%;
+  }
+}
+
+
+

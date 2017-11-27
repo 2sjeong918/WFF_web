@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html lang=ko>
 <head>
-<meta charset=UTF-8>
-<title>wow festival 2017</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">  
+<meta charset="UTF-8">
+<link rel="short icon" type="" href="http://hongiksidi.com/wow2015/wp-content/uploads/2015/11/icon.png">
+<title>와우영상제2017</title>
 <link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <link rel=stylesheet href=css/reset.css>
-<link rel=stylesheet href=css/style.css>
-<style>html{overflow:hidden}</style>
+<link rel=stylesheet href=css/landing.css>
 </head>
 <body>
 <header>
-<div class=wrapper>
-<a class=logo href=./index.html><img src=./imgs/logo2.svg alt="와우영상제 로고"></a>
-<div class=hivcd><img src=./imgs/hivcd2.svg alt="홍익시디 로고"></div>
-<nav>
-<a href=#>
-<img src=./imgs/menu.svg alt=menu>
-</a>
-</nav>
-</header>
+  <div class="logo">
+    <a href="./index.html"><img src="./imgs/logo-g.svg" alt="와우영상제 로고"></a>
+  </div>
+  <div class="sub-logo">
+    <img src="./imgs/hivcd-g.svg" alt="홍익시디 로고">
+  </div>
+  <nav class="navigation">
+    <h2 class="readable-hidden">메인메뉴</h2>
+    <div class="menubar-container">
+      <button type="button" class="btn-menubar">메인메뉴 열기</button>
+      <span class="menubar w menubar-top"></span>
+      <span class="menubar w menubar-middle"></span>
+      <span class="menubar w menubar-bottom"></span>
+    </div>
+    <ul class="main-menu">
+      <li class="about-nav"><a href="./about.html">ABOUT</a></li>
+      <li class="wow-nav"><a href="./wow.html">2017 WOW</a></li>
+      <li class="films-nav"><a href="./films.html">FILMS</a></li>
+      <li class="poster-nav"><a href="./poster.html">MOTION POSTER</a></li>
+      <li class="usb-nav"><a href="./usb.html">USB ORDER</a></li>
+      <li class="contact-nav"><a href="./contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  </header>
 <canvas id=mycanvas style="position:absolute;top:0;left:0"></canvas>
-<div class=back onclick="page_back();" style="cursor: pointer;">
-<i class="fa fa-backward white" aria-hidden=true></i>
+<div class="footerleft">
+    <div class="back" onclick="page_back();" style="cursor: pointer;">
+      <i class="fa fa-backward white" aria-hidden="true"></i>
+    </div>
+    <div class="tooltip" style="cursor: pointer;">
+      <i class="fa fa-question-circle white" aria-hidden="true"></i>
+      <span class="tooltiptext">마우스를 드래그 해보세요. 튀어오르는 공들의 자취를 따라 결을 느껴보세요. </span>
+    </div>
 </div>
-<footer class=white>
-<a href>
-<i class="fa fa-facebook" aria-hidden=true></i>
-</a>
-<a href>
-<i class="fa fa-instagram" aria-hidden=true></i>
-</a>
-<a href>
-<i class="fa fa-vimeo" aria-hidden=true></i>
-</a>
-</footer>
-</div>
+<footer>
+    <a href="https://www.facebook.com/wowfilmfestival/" target="_blank">
+      <i class="fa fa-facebook white" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.instagram.com/wowff2017" target="_blank">
+      <i class="fa fa-instagram white" aria-hidden="true"></i>
+    </a>
+    <a href="https://vimeo.com/hivcdwowff" target="_blank">
+      <i class="fa fa-vimeo white" aria-hidden="true"></i>
+    </a>
+  </footer>
+  <script src="./js/main.js"></script>
 <script>
 function page_back(){
 history.go(-1)();
 }
 </script>
-<script src=https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js></script>
-<script src=js/mainp.js></script>
+<script src="js/mainp.js"></script>
 <script type=text/processing data-processing-target=mycanvas>
-boolean[][] occupied;
-particle[][] reference;
-PVector mouse;PVector pmouse;PVector mouseV;
-class particle{PVector location;PVector velocity;int radius=round(random(10,100));int opc=round(random(10,255));particle(int x,int y){location = new PVector(x,y);velocity = new PVector();occupied[x][y] = true;reference[x][y] = this;}void update(){int px = round(location.x);int py = round(location.y);PVector newLoc = PVector.add(location,velocity);int nx = round(newLoc.x);int ny = round(newLoc.y);if((px==nx&&py==ny)==false){if(nx<0||nx>=width){velocity.x *= -0.4;}else if(ny<0||ny>=height-200){velocity.y *= -0.6;}else{if(occupied[nx][ny]){PVector delta = PVector.sub(reference[nx][ny].velocity,velocity);delta.mult(0.1);velocity.add(delta);reference[nx][ny].velocity.sub(delta);}else{occupied[px][py] = false;occupied[nx][ny] = true;reference[nx][ny] = this;location = newLoc;}}}if(mousePressed){PVector arm = PVector.sub(mouse,location);float rad = 100;if(arm.mag()<rad){PVector delta = PVector.sub(mouseV,velocity);delta.mult((1-arm.mag()/rad));velocity.add(delta);}}velocity.y += 0.4;}void display() {stroke(0);fill(255,255,0);ellipse(location.x,location.y,radius,radius);}}particle[] field; int index=100; void setup(){size(screen.width,screen.height);occupied = new boolean[width][height];reference = new particle[width][height];field = new particle[index];for(int i=0;i<field.length;i++){int x = round(random(50,width));int y = round(random(50,height-200));field[i] = new particle(x,y);}}void draw(){fill(20,100);rect(0,0,width,height);pmouse = new PVector(pmouseX,pmouseY);mouse = new PVector(mouseX,mouseY);mouseV = PVector.sub(mouse,pmouse);for(int i=0;i<field.length;i++){field[i].update();field[i].display();}}</script>
+boolean[][] occupied;particle[][] reference;PVector mouse;PVector pmouse;PVector mouseV;class particle{PVector location;PVector velocity;int radius=round(random(10,100));int opc=round(random(10,255));particle(int x,int y){location=new PVector(x,y);velocity=new PVector();occupied[x][y]=true;reference[x][y]=this;}void update(){int px=round(location.x);int py=round(location.y);PVector newLoc=PVector.add(location,velocity);int nx=round(newLoc.x);int ny=round(newLoc.y);if((px==nx && py==ny)==false){if(nx<0 || nx>=width){velocity.x*=-0.4;}else if(ny<0 || ny>=height-200){velocity.y*=-0.6;}else{if(occupied[nx][ny]){PVector delta=PVector.sub(reference[nx][ny].velocity,velocity);delta.mult(0.1);velocity.add(delta);reference[nx][ny].velocity.sub(delta);}else{occupied[px][py]=false;occupied[nx][ny]=true;reference[nx][ny]=this;location=newLoc;}}}if(mousePressed){PVector arm=PVector.sub(mouse,location);float rad=100;if(arm.mag()<rad){PVector delta=PVector.sub(mouseV,velocity);delta.mult((1-arm.mag()/rad));velocity.add(delta);}}velocity.y+=0.4;}void display(){stroke(0);fill(255,255,0);ellipse(location.x,location.y,radius,radius);}}particle[] field;int index=100;void setup(){size(screen.width,screen.height);occupied=new boolean[width][height];reference=new particle[width][height];field=new particle[index];for(int i=0;i<field.length;i++){int x=round(random(50,width));int y=round(random(50,height-200));field[i]=new particle(x,y);}}void draw(){fill(20,100);rect(0,0,width,height);pmouse=new PVector(pmouseX,pmouseY);mouse=new PVector(mouseX,mouseY);mouseV=PVector.sub(mouse,pmouse);for(int i=0;i<field.length;i++){field[i].update();field[i].display();}}
+</script>
 </body>
 </html>

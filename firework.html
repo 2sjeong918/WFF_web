@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+  <meta charset="UTF-8">
+  <link rel="short icon" type="" href="http://hongiksidi.com/wow2015/wp-content/uploads/2015/11/icon.png">
+  <title>와우영상제2017</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head> 
+<body> 
+<header>
+  <div class="logo">
+    <a href="./index.html"><img src="./imgs/logo-g.svg" alt="와우영상제 로고"></a>
+  </div>
+  <div class="sub-logo">
+    <img src="./imgs/hivcd-g.svg" alt="홍익시디 로고">
+  </div>
+  <nav class="navigation">
+    <h2 class="readable-hidden">메인메뉴</h2>
+    <div class="menubar-container">
+      <button type="button" class="btn-menubar">메인메뉴 열기</button>
+      <span class="menubar w menubar-top"></span>
+      <span class="menubar w menubar-middle"></span>
+      <span class="menubar w menubar-bottom"></span>
+    </div>
+    <ul class="main-menu">
+      <li class="about-nav"><a href="./about.html">ABOUT</a></li>
+      <li class="wow-nav"><a href="./wow.html">2017 WOW</a></li>
+      <li class="films-nav"><a href="./films.html">FILMS</a></li>
+      <li class="poster-nav"><a href="./poster.html">MOTION POSTER</a></li>
+      <li class="usb-nav"><a href="./usb.html">USB ORDER</a></li>
+      <li class="contact-nav"><a href="./contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  </header>
+    <canvas id="mycanvas" style="position: absolute; top: 0; left:0;"></canvas>
+    <div class="footerleft">
+        <div class="back" onclick="page_back();" style="cursor: pointer;">
+          <i class="fa fa-backward white" aria-hidden="true"></i>
+        </div>
+        <div class="tooltip" style="cursor: pointer;">
+          <i class="fa fa-question-circle white" aria-hidden="true"></i>
+          <span class="tooltiptext">화면 아무 곳에나 마우스를 클릭 해보세요. 불꽃놀이가 만들어내는 결을 느껴보세요.</span>
+        </div>
+    </div>
+  <footer>
+    <a href="https://www.facebook.com/wowfilmfestival/" target="_blank">
+      <i class="fa fa-facebook white" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.instagram.com/wowff2017" target="_blank">
+      <i class="fa fa-instagram white" aria-hidden="true"></i>
+    </a>
+    <a href="https://vimeo.com/hivcdwowff" target="_blank">
+      <i class="fa fa-vimeo white" aria-hidden="true"></i>
+    </a>
+  </footer>
+  <script src="./js/main.js"></script>
+  <script src="js/mainp.js"></script>
+  <script type="text/processing" data-processing-target="mycanvas">ArrayList<Explosion> explosion;ArrayList<Rocket> rocket;void setup(){size(screen.width,screen.height);explosion=new ArrayList<Explosion>();rocket=new ArrayList<Rocket>();smooth();}void draw(){fill(0,0,0,10);rect(0,0,width,height);launch();explode();}void mouseClicked(){rocket.add(new Rocket());}void launch(){for(int r=0;r<rocket.size();r++){Rocket roc=rocket.get(r);roc.draw();if(roc.reached()){explosion.add(new Explosion(roc.getX(),roc.getY(),roc.getColor()));rocket.remove(r);}}}void explode(){for(int e=0;e<explosion.size();e++){Explosion ex=explosion.get(e);ex.draw();if(ex.over()){explosion.remove(e);}}}class Explosion{ArrayList<Particles> particle;float x,y,xa,ya,dis,fin,radius;color col;Explosion(float xx,float yy,color c){particle=new ArrayList<Particles>();x=xx;y=yy;col=c;dis=0;fin=random(75,200);radius=random(1,4);}void draw(){for(int a=0;a<360;a+=12){xa=sin(radians(a))*dis;ya=cos(radians(a))*dis;particle.add(new Particles(x+xa,y+ya,col,radius));}for(int p=0;p<particle.size();p++){Particles part=particle.get(p);part.draw();particle.remove(p);}dis++;}boolean over(){return dis>fin;}}class Particles{float x,y,dia,dis;color c;Particles(float xx,float yy,color col,float radius){x=xx;y=yy;dia=radius;c=col;dis=20;}void draw(){noStroke();fill(c);ellipse(x,y,dia,dia);}float getDist(){return dis;}}class Rocket{color c;float dia,x,y,beginx,beginy,endy,r;Rocket(){dia=5;x=mouseX;y=height;endy=mouseY;r=random(0,255);c=color(255,241,r);}void draw(){noStroke();fill(c);ellipse(x,y,dia,dia);y-=11;}float getX(){return x;}float getY(){return y;}float getEnd(){return endy;}color getColor(){return c;}boolean reached(){return y<endy;}}
+  </script>
+  <script>
+function page_back(){
+history.go(-1)();
+}
+</script>
+</body>
+</html>
