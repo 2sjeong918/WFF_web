@@ -1,11 +1,16 @@
 @charset "utf-8";
 .usb-content-bg{
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../imgs/usb-bg.svg");
-  background-color: #fff;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                    url('data:image/svg+xml;utf8, <svg xmlns= "http://www.w3.org/2000/svg" viewBox="0 0 11.89 24.92"><defs><style>.cls-1{fill:#3e3a39;}</style></defs><title>usb-bg-m</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="5.94 0 0 12.46 5.94 24.92 11.89 12.46 5.94 0"/></g></g></svg>');
   background-position: top;
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 2%;
+}
+.usb-content-bg-act{
+  background-image: url('data:image/svg+xml;utf8, <svg xmlns= "http://www.w3.org/2000/svg" viewBox="0 0 11.89 24.92"><defs><style>.cls-1{fill:#fff101;}</style></defs><title>usb-bg-m</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="5.94 0 0 12.46 5.94 24.92 11.89 12.46 5.94 0"/></g></g></svg>');
+  background-position: top;
+  background-attachment: fixed;
+  background-size: 2%;
 }
 .usb-content {
   max-width: 960px;
@@ -13,44 +18,81 @@
   padding: 0 5%;
   background: #fff;
 }
-#usb-intro, #order {
-  height: 100vh;
-  text-align: center;
-}
-#usb-intro img {
-  width: 90%;
-}
 #order {
   position: relative;
-}
-
-#order img{
-  float: right;
-  width: 50%;
-}
-.order-detail {
-  float: left;
-  font-size: 1.8rem;
-  text-align: left;
-}
-.order-detail p {
-  margin-bottom: 10px;
+  /* background: red; */
 }
 .order-detail span {
   font-family: GonganB;
 
 }
-.order-detail button {
-  border: 3px solid #3e3a39;
-  border-radius: 0;
-  background: #fff;
-  font-family: GonganB;
-  color: #3e3a39;
-  position: absolute;
-  padding: 20px 10%;
-  bottom: 0;
-  cursor: pointer;
+
+
+
+
+/* 데스크탑 */
+@media screen and (min-width:800px){
+  #usb-intro, #order {
+    height: 100vh;
+    text-align: center;
+  }
+  #order img{
+    float: right;
+    width: 50%;
+  }
+  .order-detail {
+    float: left;
+    font-size: 1.8rem;
+    text-align: left;
+  }
+  .order-detail p {
+    margin-bottom: 10px;
+  }
+  .order-detail button {
+    border: 3px solid #3e3a39;
+    border-radius: 0;
+    background: #fff;
+    font-family: GonganB;
+    color: #3e3a39;
+    position: absolute;
+    padding: 20px 10%;
+    bottom: 0;
+    cursor: pointer;
+  }
+  .order-detail button:hover {
+    background: #fff101;
+  }
 }
-.order-detail button:hover {
-  background: #fff101;
+
+/* 모바일 */
+@media screen and (max-width:799px){
+  #usb-intro, #order {
+    height: 100vh;
+    text-align: center;
+    padding: 10%;
+  }
+  #order img{
+    width: 70%;
+  }
+  .order-detail {
+    font-size: 1.6rem;
+    text-align: left;
+    margin-top: 10%;
+  }
+  .order-detail p {
+    margin-bottom: 10px;
+  }
+  .order-detail button {
+    border: 3px solid #3e3a39;
+    border-radius: 0;
+    background: #fff;
+    font-family: GonganB;
+    color: #3e3a39;
+    position: absolute;
+    padding: 5% 10%;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
 }

@@ -3,25 +3,29 @@
   $( window ).scroll(function() {
     // $output.html( scrolling );
     console.log('scrolling');
-    $('.about-content-bg').css( {"backgroundImage" :"url('../imgs/about-bg-act.svg')"});
+    $('.about-content-bg').addClass('about-content-bg-act');
     $('.wow-content-bg').css( {"backgroundImage" :"url('../imgs/wow-bg-act.svg')"});
-    $('.films-content-bg').css( {"backgroundImage" :"url('../imgs/films-bg-act.svg')"});
-    $('.usb-content-bg').css( {"backgroundImage" :"url('../imgs/usb-bg-act.svg')"});
-    // $('.usb-content-bg').animate( {backgroundImage : "url('../imgs/usb-bg-act.svg')"}, 5000, 'linear',function () {
-    //   console.log('끝');
-    // });
+    $('.films-content-bg').addClass('films-content-bg-act');
+    // $('.usb-content-bg').addClass('usb-content-bg-act');
+    
     clearTimeout( $.data( this, "scrollCheck" ) );
     $.data( this, "scrollCheck", setTimeout(function() {
-      $('.about-content-bg').css( {"backgroundImage" :"linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../imgs/about-bg.svg')"});
+      $('.about-content-bg').removeClass('about-content-bg-act');
       $('.wow-content-bg').css( {"backgroundImage" :"linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../imgs/wow-bg.svg')"});
-      $('.films-content-bg').css( {"backgroundImage" :"url('../imgs/films-bg.svg')"});
-      $('.usb-content-bg').css( {"backgroundImage" :"linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../imgs/usb-bg.svg')"});
+      $('.films-content-bg').removeClass('films-content-bg-act');
+      // $('.usb-content-bg').removeClass('usb-content-bg-act');
     }, 500) );
   });
+
+  $('.order-detail button').on('mouseenter mouseleave', function( event ) {
+    $('.usb-content-bg').toggleClass( "usb-content-bg-act" );
+  })
+
+  
   var ctrl = new SM.Controller();
 
   // Scene 설정
-  var scene_list = '#intro img, #wow .wow-img, .committee-list, #sponsor ul'.split(', ');
+  var scene_list = '#wow p, .committee-list, #sponsor ul, #keynote p, #main-poster img, #eve-festival p'.split(', ');
   scene_list.forEach(function (trigger_el, idx) {
     // console.log(trigger_el);
     var scroll_el = trigger_el;
@@ -29,8 +33,8 @@
       'triggerElement': trigger_el,
       'triggerHook': 0,
       // 'reverse': false,
-      'duration': 600,
-      'offset': -500
+      'duration': 700,
+      'offset': -800
     })
     .setClassToggle(trigger_el, 'fade-in')
     .addIndicators()

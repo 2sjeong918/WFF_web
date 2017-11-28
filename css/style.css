@@ -80,6 +80,17 @@ h2, h3 {
     margin-top: 7px;
     width: 7%;
   }
+
+  .menubar-container:hover .menubar{
+    animation: 0.3s ease-in-out 1 actcolor;
+  }
+  .menubar-container:hover .menubar-top{
+    transform: rotate(-200deg);
+  }
+  .menubar-container:hover .menubar-bottom{
+    transform: rotate(-200deg);
+  }
+
   .main-menu{
     padding-top: 7%;
   }
@@ -124,7 +135,7 @@ h2, h3 {
     width: 20%;
   }
   .main-menu{
-    padding-top: 30%;
+    padding-top: 25%;
   }
   .main-menu li{
     padding: 3%;
@@ -168,18 +179,7 @@ h2, h3 {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.menubar-container:hover .menubar{
-  /* background: #fff101; */
-  /* animation-name: actcolor;
-  animation-duration: 0.3s; */
-  animation: 0.3s ease-in-out 1 actcolor;
-}
-.menubar-container:hover .menubar-top{
-  transform: rotate(-200deg);
-}
-.menubar-container:hover .menubar-bottom{
-  transform: rotate(-200deg);
-}
+
 .menubar-top {
   top: 15px;
 }
@@ -256,7 +256,6 @@ h2, h3 {
   background-repeat: no-repeat;
   background-position: right;
 }
-
 .contact-nav {
   transition: transform 0.3s ease-in-out 0.7s;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/contact-nav-bg.svg");

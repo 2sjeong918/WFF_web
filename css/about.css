@@ -1,18 +1,26 @@
 @charset "utf-8";
 
-
-.about-content-bg{
+/* .about-content-bg{
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../imgs/about-bg.svg");
   background-color: #fff;
   background-position: top;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 3s ease-in-out;
+} */
+.about-content-bg{
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                    url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.97 11.97"><defs><style>.cls-1{fill:none;stroke:#231916;stroke-miterlimit:10;}</style></defs><title>about-bg-m</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" x="2.99" y="2.99" width="5.99" height="5.99"/><polyline class="cls-1" points="11.97 2.99 8.97 2.99 8.97 0"/><polyline class="cls-1" points="2.99 0 2.99 2.99 0 2.99"/><polyline class="cls-1" points="8.97 11.97 8.97 8.97 11.97 8.97"/><polyline class="cls-1" points="0 8.97 2.99 8.97 2.99 11.97"/></g></g></svg>');
+  background-position: top;
+  background-attachment: fixed;
+  background-size: 2.5%;
 }
-#intro, #wow, #committee, #sponsor {
-  height: 100vh;
-  text-align: center;
-  overflow: hidden;
+.about-content-bg-act{
+  background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.97 11.97"><defs><style>.cls-1{fill:none;stroke:#fff101;stroke-miterlimit:10;}</style></defs><title>about-bg-m</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" x="2.99" y="2.99" width="5.99" height="5.99"/><polyline class="cls-1" points="11.97 2.99 8.97 2.99 8.97 0"/><polyline class="cls-1" points="2.99 0 2.99 2.99 0 2.99"/><polyline class="cls-1" points="8.97 11.97 8.97 8.97 11.97 8.97"/><polyline class="cls-1" points="0 8.97 2.99 8.97 2.99 11.97"/></g></g></svg>');
+  background-position: top;
+  background-attachment: fixed;
+  background-size: 2.5%;
 }
 .detail-content {
   position: relative;
@@ -24,7 +32,6 @@
   display: block;
   clear: both;
 }
-
 .about-content::after{
   content: '';
   display: block;
@@ -82,8 +89,70 @@
   display: block;
   clear: both;
 }
+
+/* 와이드 스크린 대응 */
+@media all and (min-width:1500px){
+  .sub-title {
+    /* background: skyblue; */
+    font-size: 3.5rem;
+    float: left;
+    width: 40%;
+    position: relative;
+    /* left: -15%; */
+    text-align: center;
+    margin-top: 10px;
+  }
+  .about-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    background: #fff;
+  }
+  .about-content h2 {
+    font-size: 5rem;
+    padding-bottom: 7%;
+    text-align: left;
+    /* background: skyblue; */
+  }
+  #intro, #wow, #committee, #sponsor {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  .thumb-img {
+    width: 35%;
+    min-width: 800px;
+    float: left;
+    position: fixed;
+    top: 50%;
+    padding-left: 2%;
+    transform: translateY(-50%);
+  }
+  .thumb-img img {
+    width: 50%;
+    padding: 3%;
+  }
+  .content-wrapper{
+    width: 50%;
+    float: right;
+  }
+  #wow p {
+    /* margin-top: 12%; */
+    line-height: 1.6;
+    font-size: 3rem;
+    text-align: left;
+    word-break: keep-all; 
+    /* width: 50%; */
+    float: left;
+    letter-spacing: -0.04em;
+  }
+  .committee-list{
+    /* margin-top: 5%; */
+    font-size: 2.5rem;
+  }
+}
 /* 데스크탑 */
-@media screen and (min-width:800px){
+@media (min-width:800px) and (max-width: 1499px){
   .sub-title {
     /* background: skyblue; */
     font-size: 2.5rem;
@@ -130,7 +199,7 @@
   }
   #wow p {
     /* margin-top: 12%; */
-    line-height: 1.5;
+    line-height: 1.6;
     font-size: 1.8rem;
     text-align: left;
     word-break: keep-all; 
@@ -185,7 +254,7 @@
     transform: translateY(-50%);
     /* left: 50%; */
     /* margin: 0 auto; */
-    opacity: 0.15;
+    opacity: 0.1;
     
   }
   .content-wrapper {
@@ -193,11 +262,11 @@
     text-align: center;
   }
   #wow p {
-    line-height: 1.5;
+    line-height: 1.6;
     font-size: 1.6rem;
     text-align: left;
     word-break: keep-all; 
     float: left;
-    letter-spacing: -0.04em;
+    /* letter-spacing: -0.04em; */
   }
 }
