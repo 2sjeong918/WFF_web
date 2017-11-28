@@ -63,3 +63,12 @@
   height: 100%;
   border: none;
 }
+
+/* 와이드 스크린 대응 */
+@media all and (min-width: 1500px) {
+  .films-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+  }
+}

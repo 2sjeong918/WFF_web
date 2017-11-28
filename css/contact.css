@@ -26,6 +26,14 @@
   color: #3e3a39;
 }
 
+@media all and (min-width: 1500px){
+  .contact-detail {
+    font-size: 2rem;
+    margin-top: 10%;
+    margin-left: 15%;
+    text-align: left;
+  }
+}
 /* 데스크탑 */
 @media screen and (min-width:800px){
   #contact-intro{
@@ -56,7 +64,6 @@
     height: 100%;
     border: none;
   }
-  
 }
 
 /* 모바일 */

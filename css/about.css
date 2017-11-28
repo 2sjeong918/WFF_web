@@ -120,8 +120,7 @@
     overflow: hidden;
   }
   .thumb-img {
-    width: 35%;
-    min-width: 800px;
+    min-width: 900px;
     float: left;
     position: fixed;
     top: 50%;
@@ -152,7 +151,7 @@
   }
 }
 /* 데스크탑 */
-@media (min-width:800px) and (max-width: 1499px){
+@media (min-width: 800px) and (max-width: 1499px){
   .sub-title {
     /* background: skyblue; */
     font-size: 2.5rem;

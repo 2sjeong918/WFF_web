@@ -21,3 +21,13 @@
 #poster-intro img {
   width: 70%;
 }
+
+/* 와이드 스크린 */
+@media all and (min-width: 1500px){
+  .poster-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    background: #fff;
+  }
+}

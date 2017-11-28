@@ -12,12 +12,7 @@
   background-attachment: fixed;
   background-size: 2%;
 }
-.usb-content {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 5%;
-  background: #fff;
-}
+
 #order {
   position: relative;
   /* background: red; */
@@ -28,10 +23,54 @@
 }
 
 
-
+/* 와이드 스크린 */
+@media all and (min-width: 1500px){
+  .usb-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    background: #fff;
+  }
+  #usb-intro, #order {
+    height: 100vh;
+    text-align: center;
+  }
+  #order img{
+    float: right;
+    width: 50%;
+  }
+  .order-detail {
+    float: left;
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  .order-detail p {
+    margin-bottom: 10px;
+  }
+  .order-detail button {
+    border: 3px solid #3e3a39;
+    border-radius: 0;
+    background: #fff;
+    font-family: GonganB;
+    color: #3e3a39;
+    position: absolute;
+    padding: 20px 10%;
+    bottom: 0;
+    cursor: pointer;
+  }
+  .order-detail button:hover {
+    background: #fff101;
+  }
+}
 
 /* 데스크탑 */
-@media screen and (min-width:800px){
+@media (min-width: 800px) and (max-width: 1499px){
+  .usb-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 5%;
+    background: #fff;
+  }
   #usb-intro, #order {
     height: 100vh;
     text-align: center;
