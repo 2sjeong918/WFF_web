@@ -1,30 +1,87 @@
 @charset "utf-8";
-.rwd-map {
-  overflow: hidden;
-  position: relative;
-  max-width: 100%;
-  height: 0;
+.contact-content::after {
+  content: '';
+  display: block;
+  clear: both;
 }
-
-.rwd-map.is-4x3 {
-  padding-bottom: 75%;
-}
-
-.rwd-map.is-16x9 {
-  padding-bottom: 100vh;
-}
-
-.rwd-map.is-21x9 {
-  padding-bottom: 42.8571%;
-}
-
-.rwd-map iframe {
-  position: absolute;
-  top: 0;
-  left: 50%;
+#contact-intro{
+  float: left;
   width: 50%;
-  height: 100%;
-  border: none;
+  height: 100vh;
+  text-align: center;
+}
+#contact-intro img{
+  width: 70%;
+}
+.contact-detail {
+  font-size: 1.3rem;
+  margin-top: 10%;
+  margin-left: 15%;
+  text-align: left;
+}
+.contact-detail dt, .contact-detail span{
+  font-family: GonganB;
+}
+.contact-detail dd a{
+  color: #3e3a39;
 }
 
-/*# sourceMappingURL=../../map/rwd-modules.css.map */
+@media all and (min-width: 1500px){
+  .contact-detail {
+    font-size: 2rem;
+    margin-top: 10%;
+    margin-left: 15%;
+    text-align: left;
+  }
+}
+/* 데스크탑 */
+@media screen and (min-width:800px){
+  #contact-intro{
+    float: left;
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+  }
+  .contact-detail dt{
+    margin-top: 4%;
+  }
+  .contact-detail dd{
+    margin-top: 2%;
+  }
+  .rwd-map {
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    height: 0;
+  }
+  .rwd-map.is-16x9 {
+    padding-bottom: 100vh;
+  }
+  .rwd-map iframe {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width:799px){
+  #contact-intro{
+    float: left;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding: 10%;
+  }
+  .contact-detail dt{
+    margin-top: 5%;
+  }
+  .contact-detail dd{
+    margin-top: 3%;
+  }
+  .rwd-map {
+    display: none;
+  }
+}

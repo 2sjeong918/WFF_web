@@ -16,3 +16,8 @@
     font-weight: 400;
     src: local('Noto Sans Regular'), local('NotoSans-Regular'), url('fonts/eot/NotoSansKR-Regular-Hestia.eot'), url('fonts/eot/NotoSansKR-Regular-Hestia.eot?#iefix') format('embedded-opentype'), url('fonts/woff/NotoSansKR-Regular-Hestia.woff') format('woff'), url('fonts/otf/NotoSansKR-Regular-Hestia.otf') format('opentype');
 }
+@font-face {
+  font-family: 'GonganL';
+  font-style: normal;
+  src: url(../fonts/GonganL) format('opentype', 'truetype');
+}

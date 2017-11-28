@@ -1,11 +1,16 @@
 @charset "utf-8";
 
-#wow img, .committee-list, #sponsor ul {
+#wow p,
+.committee-list,
+#sponsor ul,
+#keynote p,
+#main-poster img,
+#eve-festival p {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(40px);
   transition: all 0.5s ease-in;
 }
-#wow img.fade-in{
+#wow p.fade-in{
   transform: translateY(0);
   opacity: 1;
 }
@@ -14,6 +19,18 @@
   opacity: 1;
 }
 #sponsor ul.fade-in{
+  transform: translateY(0);
+  opacity: 1;
+}
+#keynote p.fade-in{
+  transform: translateY(0);
+  opacity: 1;
+}
+#main-poster img.fade-in{
+  transform: translateY(0);
+  opacity: 1;
+}
+#eve-festival p.fade-in{
   transform: translateY(0);
   opacity: 1;
 }

@@ -1,51 +1,196 @@
 @charset "utf-8";
 
-.wow {
-  position: fixed;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-70%);
-  z-index: 100;
+.wow-content-bg{
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../imgs/wow-bg.svg");
+  background-color: #fff;
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.wow li {
-  margin-top: 10px;
-}
-.wow li a {
+
+.wow-content::after{
+  content: '';
   display: block;
-  width: 20%;
-  padding-top: 10px;
+  clear: both;
+}
+
+.wow-content h2 span{
   border-top: 3px solid #3e3a39;
-  text-decoration: none;
-  color: #3e3a39;
-  transition: all 0.2s ease-in-out;
-}
-.wow li a:hover {
-  border-top-color: #fff101;
-}
-.wow li a.wow-act {
-  width: 30%;
-  border-top-color: #fff101;
-}
-.wow-content h2 {
-  margin-top: 80px;
-  font-size: 4rem;
-  text-align: left;
-}
-.wow-content p {
-  text-align: left;
-  font-size: 3rem;
 }
 
-#wow-intro, #keynote, #main-poster, #promotion-film, #eve-festival {
-  height: 100vh;
-  text-align: center;
-  padding: 3%;
-}
-#wow-intro img {
-  width: 90%;
+/* 와이드 스크린 대응 */
+
+@media all and (min-width: 1500px){
+  .sub-title {
+    /* background: skyblue; */
+    font-size: 3.5rem;
+    float: left;
+    width: 40%;
+    position: relative;
+    /* left: -15%; */
+    text-align: center;
+    margin-top: 10px;
+  }
+  .wow-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    background: #fff;
+  }
+  .wow-content h2 {
+    font-size: 5rem;
+    padding-bottom: 7%;
+    text-align: left;
+    /* background: skyblue; */
+  }
+  #wow-intro, #keynote, #main-poster, #promotion-film, #eve-festival {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  .wow-thumb-img {
+    /* width: 50%; */
+    min-width: 1000px;
+    float: left;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background: skyblue; */
+  }
+  .wow-thumb-img img{
+    width: 20%;
+    display: block;
+    padding: 2%;
+    margin-left: 10%;
+    /* background: red; */
+  }
+  .wow-thumb-img .left{
+    /* text-align: left; */
+    /* margin-top: 15%; */
+  }
+  .wow-thumb-img .right{
+    margin-top: -3%;
+    margin-left: 25%;
+  }
+  .wow-content p {
+    text-align: left;
+    font-size: 3rem;
+    line-height: 1.6;
+    word-break: keep-all; 
+    letter-spacing: -0.04em;
+  }
+  #main-poster img, #eve-festival img {
+    width: 95%;
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.5);
+  }
 }
 
-#main-poster img, #eve-festival img {
-  width: 60%;
-  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5)
+/* 데스크탑 */
+@media (min-width:800px) and (max-width: 1499px){
+  .wow-content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 0 5%;
+  }
+  .wow-content h2 {
+    font-size: 3rem;
+    padding-bottom: 7%;
+    text-align: left;
+  }
+  #wow-intro, #keynote, #main-poster, #promotion-film, #eve-festival {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    /* padding: 3%; */
+  }
+  .wow-thumb-img {
+    width: 50%;
+    min-width: 600px;
+    float: left;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background: skyblue; */
+  }
+  .wow-thumb-img img{
+    width: 20%;
+    display: block;
+    padding: 2%;
+    margin-left: 10%;
+    /* background: red; */
+  }
+  .wow-thumb-img .left{
+    /* text-align: left; */
+    /* margin-top: 15%; */
+  }
+  .wow-thumb-img .right{
+    margin-top: -3%;
+    margin-left: 25%;
+  }
+  .wow-content p {
+    text-align: left;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    word-break: keep-all; 
+    letter-spacing: -0.04em;
+  }
+  #main-poster img, #eve-festival img {
+    width: 90%;
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width:799px){
+  .wow-content {
+    max-width: 960px;
+    background: #fff;
+  }
+  .wow-content h2 {
+    font-size: 2.5rem;
+    padding-bottom: 7%;
+    text-align: left;
+  }
+  #wow-intro, #keynote, #main-poster, #promotion-film, #eve-festival {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    padding: 10%;
+  }
+  .wow-thumb-img {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    /* background: skyblue; */
+    /* z-index: -1; */
+    /* text-align: center; */
+  }
+  .wow-thumb-img img{
+    width: 45%;
+    display: block;
+    padding: 2%;
+    margin-left: 10%;
+    opacity: 0.15;
+    /* background: red; */
+  }
+  .wow-thumb-img .left{
+    /* text-align: left; */
+    /* margin-top: 15%; */
+  }
+  .wow-thumb-img .right{
+    margin-top: -5%;
+    margin-left: 50%;
+  }
+  .wow-content p {
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    word-break: keep-all; 
+  }
+  #main-poster img, #eve-festival img {
+    width: 90%;
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.5);
+  }
 }

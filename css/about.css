@@ -1,89 +1,271 @@
 @charset "utf-8";
-.about-content-bg{
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../imgs/about-bg.svg");
+
+/* .about-content-bg{
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../imgs/about-bg.svg");
   background-color: #fff;
   background-position: top;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 3s ease-in-out;
+} */
+.about-content-bg{
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                    url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.97 11.97"><defs><style>.cls-1{fill:none;stroke:#231916;stroke-miterlimit:10;}</style></defs><title>about-bg-m</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" x="2.99" y="2.99" width="5.99" height="5.99"/><polyline class="cls-1" points="11.97 2.99 8.97 2.99 8.97 0"/><polyline class="cls-1" points="2.99 0 2.99 2.99 0 2.99"/><polyline class="cls-1" points="8.97 11.97 8.97 8.97 11.97 8.97"/><polyline class="cls-1" points="0 8.97 2.99 8.97 2.99 11.97"/></g></g></svg>');
+  background-position: top;
+  background-attachment: fixed;
+  background-size: 2.5%;
 }
-.about {
-  position: fixed;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-70%);
-  z-index: 100;
-}
-.about li {
-  margin-top: 10px;
-}
-.about li a {
-  display: block;
-  width: 20%;
-  padding-top: 10px;
-  border-top: 3px solid #3e3a39;
-  text-decoration: none;
-  color: #3e3a39;
-  transition: all 0.2s ease-in-out;
-}
-.about li a:hover {
-  border-top-color: #fff101;
-}
-.about li a.about-act {
-  width: 30%;
-  border-top-color: #fff101;
-}
-#intro, #wow, #committee, #sponsor {
-  height: 100vh;
-  text-align: center;
-  /* background: skyblue; */
-  /* padding: 3%; */
-  /* border: 1px solid #333; */
-  /* background: #fff; */
+.about-content-bg-act{
+  background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.97 11.97"><defs><style>.cls-1{fill:none;stroke:#fff101;stroke-miterlimit:10;}</style></defs><title>about-bg-m</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" x="2.99" y="2.99" width="5.99" height="5.99"/><polyline class="cls-1" points="11.97 2.99 8.97 2.99 8.97 0"/><polyline class="cls-1" points="2.99 0 2.99 2.99 0 2.99"/><polyline class="cls-1" points="8.97 11.97 8.97 8.97 11.97 8.97"/><polyline class="cls-1" points="0 8.97 2.99 8.97 2.99 11.97"/></g></g></svg>');
+  background-position: top;
+  background-attachment: fixed;
+  background-size: 2.5%;
 }
 .detail-content {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  
 }
-.about-content {
-  max-width: 900px;
-  margin: 0 auto;
-  background: #fff;
+.detail-content::after{
+  content: '';
+  display: block;
+  clear: both;
 }
-.about-content h2 {
-  /* margin-top: 80px; */
-  font-size: 4rem;
+.about-content::after{
+  content: '';
+  display: block;
+  clear: both;
 }
-#intro img {
-  width: 80%;
+
+.about-content h2 span{
+  border-top: 3px solid #3e3a39;
 }
-#wow p {
-  margin-top: 10%;
-  line-height: 1.5;
+#wow {
+  /* padding: 5%; */
+  width: 100%;
 }
 
 .committee-list{
-  margin-top: 5%;
+  /* margin-top: 5%; */
+  font-size: 1.4rem;
+}
+.committee-list > li {
+  /* background: yellow; */
+  margin-top: 10px;
 }
 .committee-list span{
   display: block;
+  margin-top: 10px;
 }
+
 .committee-list ul {
+  /* background: red; */
   border-top: 1px solid #3e3a39;
   border-bottom: 1px solid #3e3a39;
-  padding: 20px;
-  margin: 10px;
+  padding: 15px 5px;
+  /* margin: 25px 0; */
+}
+.committee-list ul li {
+  float: left;
+  width: 25%;
+}
+.committee-list ul::after{
+  content: '';
+  display: block;
+  clear: both;
 }
 #sponsor ul {
-  margin-top: 10%;
+  padding-top: 5%;
+}
+#sponsor li {
+  float: left;
+  width: 50%;
+  padding: 5%;
   /* background: red; */
 }
-#sponsor li img {
-  width: 60%;
-  /* position: relative; */
-  /* top: 50%; */
-  /* background: #3e3a39; */
-  /* transform: translateY(-50%); */
+#sponsor li::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* 와이드 스크린 대응 */
+@media all and (min-width:1500px){
+  .sub-title {
+    /* background: skyblue; */
+    font-size: 3.5rem;
+    float: left;
+    width: 40%;
+    position: relative;
+    /* left: -15%; */
+    text-align: center;
+    margin-top: 10px;
+  }
+  .about-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    background: #fff;
+  }
+  .about-content h2 {
+    font-size: 5rem;
+    padding-bottom: 7%;
+    text-align: left;
+    /* background: skyblue; */
+  }
+  #intro, #wow, #committee, #sponsor {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  .thumb-img {
+    min-width: 900px;
+    float: left;
+    position: fixed;
+    top: 50%;
+    padding-left: 2%;
+    transform: translateY(-50%);
+  }
+  .thumb-img img {
+    width: 50%;
+    padding: 3%;
+  }
+  .content-wrapper{
+    width: 50%;
+    float: right;
+  }
+  #wow p {
+    /* margin-top: 12%; */
+    line-height: 1.6;
+    font-size: 3rem;
+    text-align: left;
+    word-break: keep-all; 
+    /* width: 50%; */
+    float: left;
+    letter-spacing: -0.04em;
+  }
+  .committee-list{
+    /* margin-top: 5%; */
+    font-size: 2.5rem;
+  }
+}
+/* 데스크탑 */
+@media (min-width: 800px) and (max-width: 1499px){
+  .sub-title {
+    /* background: skyblue; */
+    font-size: 2.5rem;
+    float: left;
+    width: 40%;
+    position: relative;
+    /* left: -15%; */
+    text-align: center;
+    margin-top: 10px;
+  }
+  .about-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 5%;
+    background: #fff;
+  }
+  .about-content h2 {
+    font-size: 3rem;
+    padding-bottom: 7%;
+    text-align: left;
+    /* background: skyblue; */
+  }
+  #intro, #wow, #committee, #sponsor {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  .thumb-img {
+    width: 50%;
+    min-width: 700px;
+    float: left;
+    position: fixed;
+    top: 50%;
+    padding-left: 2%;
+    transform: translateY(-50%);
+  }
+  .thumb-img img {
+    width: 50%;
+    padding: 3%;
+  }
+  .content-wrapper{
+    width: 50%;
+    float: right;
+  }
+  #wow p {
+    /* margin-top: 12%; */
+    line-height: 1.6;
+    font-size: 1.8rem;
+    text-align: left;
+    word-break: keep-all; 
+    /* width: 50%; */
+    float: left;
+    letter-spacing: -0.04em;
+  }
+  
+}
+  
+/* 모바일 */
+@media screen and (max-width:799px){
+  .sub-title {
+    /* background: skyblue; */
+    font-size: 2rem;
+    float: left;
+    width: 40%;
+    position: relative;
+    /* left: -15%; */
+    text-align: center;
+    margin-top: 20px;
+  }
+  .about-content {
+    width: 100%;
+    background: #fff;
+  }
+  .about-content h2 {
+    font-size: 2.5rem;
+    padding-bottom: 7%;
+    text-align: left;
+    /* background: skyblue; */
+  }
+  #intro, #wow, #committee, #sponsor {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    padding: 10%;
+  }
+  .thumb-img {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    /* text-align: center; */
+    padding: 5% 5%;
+    
+  }
+  .thumb-img img {
+    /* background: red; */
+    width: 90%;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    /* left: 50%; */
+    /* margin: 0 auto; */
+    opacity: 0.1;
+    
+  }
+  .content-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+  #wow p {
+    line-height: 1.6;
+    font-size: 1.6rem;
+    text-align: left;
+    word-break: keep-all; 
+    float: left;
+    /* letter-spacing: -0.04em; */
+  }
 }
