@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 .about-content-bg{
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../imgs/about-bg.svg");
   background-color: #fff;
@@ -7,36 +8,6 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.about-content-bg{
-  fill: tomato;
-  fill-rule: evenodd;
-}
-.about {
-  position: fixed;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-70%);
-  z-index: 100;
-  width: 20%;
-}
-.about li {
-  margin-top: 10px;
-}
-.about li a {
-  display: block;
-  width: 20%;
-  padding-top: 10px;
-  border-top: 3px solid #3e3a39;
-  text-decoration: none;
-  color: #3e3a39;
-  transition: all 0.2s ease-in-out;
-}
-.about li a:hover {
-  border-top-color: #fff101;
-}
-.about li a.about-act {
-  width: 30%;
 }
 #intro, #wow, #committee, #sponsor {
   height: 100vh;
@@ -53,62 +24,40 @@
   display: block;
   clear: both;
 }
-.about-content {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 10%;
-  background: #fff;
+
+.about-content::after{
+  content: '';
+  display: block;
+  clear: both;
 }
-.about-content h2 {
-  font-size: 4rem;
-}
-#intro .graphic {
-  position: absolute;
-  right: -100px;
-  bottom: 0px;
-}
-#intro span {
-  font-size: 5rem;
-  position: absolute;
-  bottom: 15%;
-  cursor: pointer;
+
+.about-content h2 span{
+  border-top: 3px solid #3e3a39;
 }
 #wow {
   /* padding: 5%; */
-}
-#wow .graphic {
-  position: absolute;
-  width: 50%;
-  left: 100px;
-  top: -100px;
-  transform: rotate(100deg);
-}
-#wow .wow-img {
-  float: left;
-  margin-top: 10%;
-  padding-right: 5%;
-}
-#wow p {
-  margin-top: 12%;
-  line-height: 1.5;
-  font-size: 2rem;
-  text-align: left;
-  white-space:normal;
+  width: 100%;
 }
 
 .committee-list{
-  margin-top: 5%;
-  font-size: 2rem;
+  /* margin-top: 5%; */
+  font-size: 1.4rem;
+}
+.committee-list > li {
+  /* background: yellow; */
+  margin-top: 10px;
 }
 .committee-list span{
   display: block;
   margin-top: 10px;
 }
+
 .committee-list ul {
+  /* background: red; */
   border-top: 1px solid #3e3a39;
   border-bottom: 1px solid #3e3a39;
-  padding: 20px;
-  margin: 10px;
+  padding: 15px 5px;
+  /* margin: 25px 0; */
 }
 .committee-list ul li {
   float: left;
@@ -120,19 +69,135 @@
   clear: both;
 }
 #sponsor ul {
-  padding-top: 20%;
+  padding-top: 5%;
 }
 #sponsor li {
   float: left;
-  width: 25%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  /* background: skyblue; */
-  padding: 30px;
+  width: 50%;
+  padding: 5%;
+  /* background: red; */
 }
 #sponsor li::after{
   content: '';
   display: block;
   clear: both;
+}
+/* 데스크탑 */
+@media screen and (min-width:800px){
+  .sub-title {
+    /* background: skyblue; */
+    font-size: 2.5rem;
+    float: left;
+    width: 40%;
+    position: relative;
+    /* left: -15%; */
+    text-align: center;
+    margin-top: 10px;
+  }
+  .about-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 5%;
+    background: #fff;
+  }
+  .about-content h2 {
+    font-size: 3rem;
+    padding-bottom: 7%;
+    text-align: left;
+    /* background: skyblue; */
+  }
+  #intro, #wow, #committee, #sponsor {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  .thumb-img {
+    width: 50%;
+    min-width: 700px;
+    float: left;
+    position: fixed;
+    top: 50%;
+    padding-left: 2%;
+    transform: translateY(-50%);
+  }
+  .thumb-img img {
+    width: 50%;
+    padding: 3%;
+  }
+  .content-wrapper{
+    width: 50%;
+    float: right;
+  }
+  #wow p {
+    /* margin-top: 12%; */
+    line-height: 1.5;
+    font-size: 1.8rem;
+    text-align: left;
+    word-break: keep-all; 
+    /* width: 50%; */
+    float: left;
+    letter-spacing: -0.04em;
+  }
+  
+}
+  
+/* 모바일 */
+@media screen and (max-width:799px){
+  .sub-title {
+    /* background: skyblue; */
+    font-size: 2rem;
+    float: left;
+    width: 40%;
+    position: relative;
+    /* left: -15%; */
+    text-align: center;
+    margin-top: 20px;
+  }
+  .about-content {
+    width: 100%;
+    background: #fff;
+  }
+  .about-content h2 {
+    font-size: 2.5rem;
+    padding-bottom: 7%;
+    text-align: left;
+    /* background: skyblue; */
+  }
+  #intro, #wow, #committee, #sponsor {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    padding: 10%;
+  }
+  .thumb-img {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    /* text-align: center; */
+    padding: 5% 5%;
+    
+  }
+  .thumb-img img {
+    /* background: red; */
+    width: 90%;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    /* left: 50%; */
+    /* margin: 0 auto; */
+    opacity: 0.15;
+    
+  }
+  .content-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+  #wow p {
+    line-height: 1.5;
+    font-size: 1.6rem;
+    text-align: left;
+    word-break: keep-all; 
+    float: left;
+    letter-spacing: -0.04em;
+  }
 }

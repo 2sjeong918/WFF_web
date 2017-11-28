@@ -8,9 +8,9 @@
   background-size: cover;
 }
 .usb-content {
-  max-width: 980px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 10%;
+  padding: 0 5%;
   background: #fff;
 }
 #usb-intro, #order {
@@ -18,25 +18,27 @@
   text-align: center;
 }
 #usb-intro img {
-  width: 70%;
+  width: 90%;
 }
 #order {
-  padding: 10%;
   position: relative;
 }
 
 #order img{
   float: right;
-
+  width: 50%;
 }
 .order-detail {
   float: left;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: left;
-  font-family: GonganB;
 }
 .order-detail p {
   margin-bottom: 10px;
+}
+.order-detail span {
+  font-family: GonganB;
+
 }
 .order-detail button {
   border: 3px solid #3e3a39;

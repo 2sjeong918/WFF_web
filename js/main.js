@@ -26,38 +26,45 @@ $(document).ready(
   }
 );
 
-// about 탭
+// 탭 이동
 
-$(document).ready(
-  function() {
-    var intro_tab = $('.intro-tab');
-    var wow_tab = $('.wow-tab');
-    var committee_tab = $('.committee-tab');
-    var sponsor_tab = $('.sponsor-tab');
-
-
-    var tab = $('.about li a');
-    var scroll_down = $('.fa-angle-down');
-    
-    var act_tab = function() {
-      var tab_group = $(this).parent().siblings().children();
-      var scrollPosition = $($(this).attr('data-target')).offset().top;
-
-      if (tab_group.hasClass('about-act')) {
-        tab_group.removeClass('about-act');
-        $(this).addClass('about-act');
-        $('html, body').animate({
-          scrollTop: scrollPosition
-        });
-      }else{
-        $(this).addClass('about-act');
-        $('html, body').animate({
-          scrollTop: scrollPosition
-        });
-      }
-    }
+(function(global, $){
+  'use strict';
+  var $menu = $('.tab li'),
+      $menu_a = $('.tab li a'),
+      $scroll_down = $('.scroll-down'),
+      $contents = $('.scroll'),
+      $doc = $('html, body')
   
-    tab.click(act_tab);
-    scroll_down.click(act_tab)
-  }
-);
+      $menu.on('click', 'a', function (e) {
+
+        var $target = $(this).parent(),
+            idx = $target.index(),
+            section = $contents.eq(idx),
+            offsetTop = section.offset().top;
+        console.log(this);
+        $(this).addClass('tab-act');
+        $doc.stop().animate({ scrollTop :offsetTop }, 500);
+
+        return false;
+      });
+
+      $(window).scroll(function(){
+        var scltop = $(window).scrollTop();
+        $.each($contents, function(idx, item){
+          console.log(idx, item);
+          var $target = $contents.eq(idx),
+              i = $target.index(),
+              targetTop = $target.offset().top;
+
+          if (targetTop <= scltop) { 
+            $menu_a.removeClass('tab-act');
+            $menu_a.eq(idx).addClass('tab-act'); 
+          }
+          if (!(0 <= scltop)) { 
+            $menu_a.removeClass('tab-act'); 
+          } 
+        })
+      });
+      
+})(this, this.jQuery);

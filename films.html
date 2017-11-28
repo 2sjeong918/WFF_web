@@ -21,9 +21,9 @@
       <h2 class="readable-hidden">메인메뉴</h2>
       <div class="menubar-container">
         <button type="button" class="btn-menubar">메인메뉴 열기</button>
-        <span class="menubar menubar-top"></span>
-        <span class="menubar menubar-middle"></span>
-        <span class="menubar menubar-bottom"></span>
+        <span class="menubar menubar-w menubar-top"></span>
+        <span class="menubar menubar-w menubar-middle"></span>
+        <span class="menubar menubar-w menubar-bottom"></span>
       </div>
       <ul class="main-menu">
         <li class="about-nav"><a href="./about.html">ABOUT</a></li>
@@ -38,31 +38,35 @@
   <main>
     <div class="films-content-bg">
       <div class="films-content">
-        <div id="films-intro">
+        <ul class="tab">
+          <li><a class="intro-tab" href="#films-intro"></a></li>
+          <li><a class="wow-tab" href="#film01"></a></li>
+          <li><a class="committee-tab" href="#film02"></a></li>
+          <li><a class="sponsor-tab" href="#film03"></a></li>
+        </ul>
+        <div id="films-intro" class="scroll">
           <div class="detail-content">
             <h2 class="readable-hidden">FILMS</h2>
             <img src="./imgs/films-intro.svg" alt="films 레터링 이미지">
           </div>
+          <span class="fa fa-angle-down scroll-down" aria-hidden="true"></span>
         </div>
-        <div id="film01">
+        <div id="film01" class="scroll">
           <div class="detail-content">
-            <h2>01 프로모션 영상</h2>
             <div class="rwd-video is-16x9">
               <iframe src="https://player.vimeo.com/video/239088501" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
           </div>
         </div>
-        <div id="film02">
+        <div id="film02" class="scroll">
           <div class="detail-content">
-            <h2>02 프로모션 영상</h2>
             <div class="rwd-video is-16x9">
               <iframe src="https://player.vimeo.com/video/242236106" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
           </div>
         </div>
-        <div id="film03">
+        <div id="film03" class="scroll">
           <div class="detail-content">
-            <h2>03 프로모션 영상</h2>
             <div class="rwd-video is-16x9">
               <iframe src="https://player.vimeo.com/video/243291342" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
