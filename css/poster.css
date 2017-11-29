@@ -21,6 +21,10 @@
 #poster-intro img {
   width: 70%;
 }
+#poster-intro p {
+  margin-top: 50px;
+  font-size: 3rem;
+}
 
 /* 와이드 스크린 */
 @media all and (min-width: 1500px){
