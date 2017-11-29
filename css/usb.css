@@ -26,7 +26,7 @@
 
 
 /* 와이드 스크린 */
-@media all and (min-width: 1500px){
+@media all and (min-width: 1700px){
   .usb-content {
     max-width: 1400px;
     margin: 0 auto;
@@ -66,7 +66,7 @@
 }
 
 /* 데스크탑 */
-@media (min-width: 800px) and (max-width: 1499px){
+@media (min-width: 800px) and (max-width: 1699px){
   .usb-content {
     max-width: 960px;
     margin: 0 auto;

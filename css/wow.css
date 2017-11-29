@@ -20,7 +20,7 @@
 
 /* 와이드 스크린 대응 */
 
-@media all and (min-width: 1500px){
+@media all and (min-width: 1700px){
   .sub-title {
     /* background: skyblue; */
     font-size: 3.5rem;
@@ -43,7 +43,7 @@
     text-align: left;
     /* background: skyblue; */
   }
-  #wow-intro, #keynote, #main-poster, #promotion-film, #eve-festival {
+  #wow-intro, #keynote, #main-poster, #promotion-film, #eve-festival, #eve-festival-img {
     height: 100vh;
     text-align: center;
     overflow: hidden;
@@ -79,14 +79,14 @@
     word-break: keep-all; 
     letter-spacing: -0.04em;
   }
-  #main-poster img, #eve-festival img {
-    width: 95%;
+  #main-poster img, #eve-festival-img img {
+    width: 90%;
     box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.5);
   }
 }
 
 /* 데스크탑 */
-@media (min-width:800px) and (max-width: 1499px){
+@media (min-width:800px) and (max-width: 1699px){
   .wow-content {
     max-width: 960px;
     margin: 0 auto;

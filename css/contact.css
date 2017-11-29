@@ -26,7 +26,7 @@
   color: #3e3a39;
 }
 
-@media all and (min-width: 1500px){
+@media all and (min-width: 1700px){
   .contact-detail {
     font-size: 2rem;
     margin-top: 10%;

@@ -27,7 +27,7 @@
 }
 
 /* 와이드 스크린 */
-@media all and (min-width: 1500px){
+@media all and (min-width: 1700px){
   .poster-content {
     max-width: 1400px;
     margin: 0 auto;
