@@ -20,7 +20,7 @@
   /* background: red; */
 }
 .order-detail span {
-  font-family: GonganB;
+  font-family: 'GonganB', 'Nanum GothicB', sans-serif;
 
 }
 
@@ -53,7 +53,7 @@
     border: 3px solid #3e3a39;
     border-radius: 0;
     background: #fff;
-    font-family: GonganB;
+    font-family: 'GonganB', 'Nanum GothicB', sans-serif;
     color: #3e3a39;
     position: absolute;
     padding: 20px 10%;
@@ -93,7 +93,7 @@
     border: 3px solid #3e3a39;
     border-radius: 0;
     background: #fff;
-    font-family: GonganB;
+    font-family: 'GonganB', 'Nanum GothicB', sans-serif;
     color: #3e3a39;
     position: absolute;
     padding: 20px 10%;
@@ -133,7 +133,7 @@
     border: 3px solid #3e3a39;
     border-radius: 0;
     background: #fff;
-    font-family: GonganB;
+    font-family: 'GonganB', 'Nanum GothicB', sans-serif;
     color: #3e3a39;
     position: absolute;
     padding: 5% 10%;

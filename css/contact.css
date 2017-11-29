@@ -20,7 +20,7 @@
   text-align: left;
 }
 .contact-detail dt, .contact-detail span{
-  font-family: GonganB;
+  font-family: 'GonganB', 'Nanum GothicB', sans-serif;
 }
 .contact-detail dd a{
   color: #3e3a39;

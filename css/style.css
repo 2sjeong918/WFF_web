@@ -24,7 +24,7 @@
 }
 
 body {
-  font-family: GonganR;
+  font-family: 'GonganR', 'Nanum GothicR', sans-serif;
   color: #3e3a39;
 }
 
@@ -32,7 +32,7 @@ html {
   font-size: 10px;
 }
 h2, h3 {
-  font-family: GonganB;
+  font-family: 'GonganB', 'Nanum GothicB', sans-serif;
 }
 
 .readable-hidden {
@@ -137,7 +137,7 @@ h2, h3 {
     width: 20%;
   }
   .main-menu{
-    padding-top: 25%;
+    padding-top: 20%;
   }
   .main-menu li{
     padding: 3%;

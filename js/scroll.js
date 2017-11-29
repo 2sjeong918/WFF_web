@@ -41,7 +41,7 @@
       'offset': -800
     })
     .setClassToggle(trigger_el, 'fade-in')
-    .addIndicators()
+    // .addIndicators()
     .addTo(ctrl)
     .on('enter', function (e) {
       if (idx==3) {
