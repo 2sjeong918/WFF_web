@@ -20,13 +20,13 @@
   text-align: left;
 }
 .contact-detail dt, .contact-detail span{
-  font-family: GonganB;
+  font-family: 'GonganB', 'Nanum GothicB', sans-serif;
 }
 .contact-detail dd a{
   color: #3e3a39;
 }
 
-@media all and (min-width: 1500px){
+@media all and (min-width: 1700px){
   .contact-detail {
     font-size: 2rem;
     margin-top: 10%;
@@ -83,5 +83,7 @@
   }
   .rwd-map {
     display: none;
+    /* width: 100%; */
+    /* height: 50%; */
   }
 }

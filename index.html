@@ -4,12 +4,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">  
   <meta charset="UTF-8">
-  <link rel="short icon" type="" href="http://hongiksidi.com/wow2015/wp-content/uploads/2015/11/icon.png">
+  <link rel="short icon" type="text/css" href="http://hongiksidi.com/wow2015/wp-content/uploads/2015/11/icon.png">
   <title>와우영상제2017</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--   <link rel="stylesheet" type="" href="./css/reset.css"> -->
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/landing.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/landing.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!--   <script src="js/prefixfree.min.js"></script> -->
 </head>
@@ -23,13 +23,12 @@ if (isMobile()) {
 }
 </script>
 <script type="text/javascript">
-$(window).load(function() {
-// setTimeout(function() { console.log('Works!'}, 3000);      
+$(window).load(function() {      
      $('#loading').hide();  
     });
 </script>
 <div id="loading">
-  <div id="box"><img id="loading-image" src="imgs/wow.gif" alt="Loading..." /></div>
+  <div id="box"><img class="la" id="loading-image" src="imgs/wow.gif" alt="Loading..." /></div>
 </div>
 <header>
   <div class="logo">
@@ -57,78 +56,30 @@ $(window).load(function() {
   </nav>
   </header>
   <main>
-        <div class="png night2"><img src="imgs/night_2.png" alt="wowff"></div>
-        <div class="png grid2"><img src="imgs/shape/1-22.png" alt="wowff"></div>
-        <div class="png shield"><img src="imgs/shape/1-26.png" alt="wowff"></div>
-        <div class="png shield2"><img src="imgs/shape/1-25.png" alt="wowff"></div>
-        <div class="png stripe2"><img src="imgs/shape/1-24.png" alt="wowff"></div>
-        <div class="png stripe3"><img src="imgs/shape/1-23.png" alt="wowff"></div>
-        <div class="png particle"><img src="imgs/particle_1.png" alt="wowff"></div>
-        <div class="png particle1"><img src="imgs/particle_2.png" alt="wowff"></div>
+        <div class="png night2"><img class="la" src="imgs/night_2.png" alt="wowff"></div>
+        <div class="png grid2"><img class="la" src="imgs/shape/1-22.png" alt="wowff"></div>
+        <div class="png shield"><img class="la" src="imgs/shape/1-26.png" alt="wowff"></div>
+        <div class="png shield2"><img class="la" src="imgs/shape/1-25.png" alt="wowff"></div>
+        <div class="png stripe2"><img class="la" src="imgs/shape/1-24.png" alt="wowff"></div>
+        <div class="png stripe3"><img class="la" src="imgs/shape/1-23.png" alt="wowff"></div>
+        <div class="png particle"><img class="la" src="imgs/particle_1.png" alt="wowff"></div>
+        <div class="png particle1"><img class="la" src="imgs/particle_2.png" alt="wowff"></div>
 
-        <a href="grid.html"><div class="gif grid"><img src="imgs/grid_1.gif" alt="wowff"></div></a>
-        <a href="firework.html"><div class="gif firework"><img src="imgs/firework_1.gif" alt="wowff"></div></a>
-        <a href="star.html"><div class="gif night"><img src="imgs/night_1.gif" alt="wowff"></div></a>
-        <a href="diamond.html"><div class="gif diamond"><img src="imgs/diamond_1.gif" alt="wowff"></div></a>
-        <a href="ball.html"><div class="gif dot"><img src="imgs/dot_1.gif" alt="wowff"></div></a>
-        <a href="stripe.html"><div class="gif stripe"><img src="imgs/stripe_1.gif" alt="wowff"></div></a>
-        <script>
-          $(".grid").hover(
-        function(){ // Mouse Over
-            $(this).find('img').attr('src', 'imgs/gifyellow/grid_1.gif');
-        },
-        function(){ // Mouse Out
-            $(this).find('img').attr('src', 'imgs/grid_1.gif');
-        });
+        <a href="grid.html"><div class="gif grid"><img class="la" src="imgs/grid_1.gif" alt="wowff"></div></a>
+        <a href="firework.html"><div class="gif firework"><img class="la" src="imgs/firework_1.gif" alt="wowff"></div></a>
+        <a href="star.html"><div class="gif night"><img class="la" src="imgs/night_1.gif" alt="wowff"></div></a>
+        <a href="diamond.html"><div class="gif diamond"><img class="la" src="imgs/diamond_1.gif" alt="wowff"></div></a>
+        <a href="ball.html"><div class="gif dot"><img class="la" src="imgs/dot_1.gif" alt="wowff"></div></a>
+        <a href="stripe.html"><div class="gif stripe"><img class="la" src="imgs/stripe_1.gif" alt="wowff"></div></a>
+        <script src="js/hover.js"></script>
 
-        $(".firework").hover(
-        function(){ // Mouse Over
-            $(this).find('img').attr('src', 'imgs/gifyellow/firework_1.gif');
-        },
-        function(){ // Mouse Out
-            $(this).find('img').attr('src', 'imgs/firework_1.gif');
-        });
-
-        $(".night").hover(
-        function(){ // Mouse Over
-            $(this).find('img').attr('src', 'imgs/gifyellow/night_1.gif');
-        },
-        function(){ // Mouse Out
-            $(this).find('img').attr('src','imgs/night_1.gif');
-        });
-
-        $(".diamond").hover(
-        function(){ // Mouse Over
-            $(this).find('img').attr('src', 'imgs/gifyellow/diamond_1.gif');
-        },
-        function(){ // Mouse Out
-            $(this).find('img').attr('src', 'imgs/diamond_1.gif');
-        });
-
-        $(".dot").hover(
-        function(){ // Mouse Over
-            $(this).find('img').attr('src', 'imgs/gifyellow/dot_1.gif');
-        },
-        function(){ // Mouse Out
-            $(this).find('img').attr('src', 'imgs/dot_1.gif');
-        });
-
-        $(".stripe").hover(
-        function(){ // Mouse Over
-            $(this).find('img').attr('src', 'imgs/gifyellow/stripe_1.gif');
-        },
-        function(){ // Mouse Out
-            $(this).find('img').attr('src', 'imgs/stripe_1.gif');
-        });
-        </script>
-
-        <div class="svg s1"><img src="imgs/shape/1-07.svg" alt="wowff"></div>
-        <div class="svg s2"><img src="imgs/shape/1-08.svg" alt="wowff"></div>
-        <div class="svg s3"><img src="imgs/shape/1-09.svg" alt="wowff"></div>
-        <div class="svg s4"><img src="imgs/shape/1-10.svg" alt="wowff"></div>
-        <div class="svg s5"><img src="imgs/shape/1-20.svg" alt="wowff"></div>
-        <div class="svg s6"><img src="imgs/shape/1-21.svg" alt="wowff"></div>
-        <div class="svg s7"><img src="imgs/shape/1-20.svg" alt="wowff"></div>
+        <div class="svg s1"><img class="la" src="imgs/shape/1-07.svg" alt="wowff"></div>
+        <div class="svg s2"><img class="la" src="imgs/shape/1-08.svg" alt="wowff"></div>
+        <div class="svg s3"><img class="la" src="imgs/shape/1-09.svg" alt="wowff"></div>
+        <div class="svg s4"><img class="la" src="imgs/shape/1-10.svg" alt="wowff"></div>
+        <div class="svg s5"><img class="la" src="imgs/shape/1-20.svg" alt="wowff"></div>
+        <div class="svg s6"><img class="la" src="imgs/shape/1-21.svg" alt="wowff"></div>
+        <div class="svg s7"><img class="la" src="imgs/shape/1-20.svg" alt="wowff"></div>
   </main>
     <div class="footerleft">
     <div class="tooltip" style="cursor: pointer;">

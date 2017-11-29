@@ -1,6 +1,8 @@
 @charset "utf-8";
 .usb-content-bg{
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                    url('../imgs/usb-bg-m');
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
                     url('data:image/svg+xml;utf8, <svg xmlns= "http://www.w3.org/2000/svg" viewBox="0 0 11.89 24.92"><defs><style>.cls-1{fill:#3e3a39;}</style></defs><title>usb-bg-m</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="5.94 0 0 12.46 5.94 24.92 11.89 12.46 5.94 0"/></g></g></svg>');
   background-position: top;
   background-attachment: fixed;
@@ -18,13 +20,13 @@
   /* background: red; */
 }
 .order-detail span {
-  font-family: GonganB;
+  font-family: 'GonganB', 'Nanum GothicB', sans-serif;
 
 }
 
 
 /* 와이드 스크린 */
-@media all and (min-width: 1500px){
+@media all and (min-width: 1700px){
   .usb-content {
     max-width: 1400px;
     margin: 0 auto;
@@ -51,7 +53,7 @@
     border: 3px solid #3e3a39;
     border-radius: 0;
     background: #fff;
-    font-family: GonganB;
+    font-family: 'GonganB', 'Nanum GothicB', sans-serif;
     color: #3e3a39;
     position: absolute;
     padding: 20px 10%;
@@ -64,7 +66,7 @@
 }
 
 /* 데스크탑 */
-@media (min-width: 800px) and (max-width: 1499px){
+@media (min-width: 800px) and (max-width: 1699px){
   .usb-content {
     max-width: 960px;
     margin: 0 auto;
@@ -91,7 +93,7 @@
     border: 3px solid #3e3a39;
     border-radius: 0;
     background: #fff;
-    font-family: GonganB;
+    font-family: 'GonganB', 'Nanum GothicB', sans-serif;
     color: #3e3a39;
     position: absolute;
     padding: 20px 10%;
@@ -105,6 +107,12 @@
 
 /* 모바일 */
 @media screen and (max-width:799px){
+  .usb-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 5%;
+    background: #fff;
+  }
   #usb-intro, #order {
     height: 100vh;
     text-align: center;
@@ -125,7 +133,7 @@
     border: 3px solid #3e3a39;
     border-radius: 0;
     background: #fff;
-    font-family: GonganB;
+    font-family: 'GonganB', 'Nanum GothicB', sans-serif;
     color: #3e3a39;
     position: absolute;
     padding: 5% 10%;

@@ -8,8 +8,8 @@
   <link rel="short icon" type="" href="http://hongiksidi.com/wow2015/wp-content/uploads/2015/11/icon.png">
   <title>2017 와우영상제</title>
   <!-- 공통 스타일 -->
-  <link rel="stylesheet" type="" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
@@ -39,17 +39,20 @@
     <div class="films-content-bg">
       <div class="films-content">
         <ul class="tab">
-          <li><a class="intro-tab" href="#films-intro"></a></li>
-          <li><a class="wow-tab" href="#film01"></a></li>
-          <li><a class="committee-tab" href="#film02"></a></li>
-          <li><a class="sponsor-tab" href="#film03"></a></li>
+          <li><a href="#films-intro"></a></li>
+          <li><a href="#film01"></a></li>
+          <li><a href="#film02"></a></li>
+          <li><a href="#film03"></a></li>
+          <li><a href="#film04"></a></li>
         </ul>
         <div id="films-intro" class="scroll">
           <div class="detail-content">
             <h2 class="readable-hidden">FILMS</h2>
             <img src="./imgs/films-intro.svg" alt="films 레터링 이미지">
           </div>
-          <span class="fa fa-angle-down scroll-down" aria-hidden="true"></span>
+          <a class="scroll-down" href="#film01">
+            <span class="fa fa-angle-down" aria-hidden="true"></span>
+          </a>
         </div>
         <div id="film01" class="scroll">
           <div class="detail-content">
@@ -72,6 +75,13 @@
             </div>
           </div>
         </div>
+        <div id="film04" class="scroll">
+          <div class="detail-content">
+            <div class="rwd-video is-16x9">
+              <iframe src="https://player.vimeo.com/video/244997571" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -87,8 +97,10 @@
     </a>
   </footer>
   <script src="./js/jquery.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
+  <script src="./js/scrollMagic.js"></script>
+  <script src="./js/scrollMagicDebug.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/scroll.js"></script>
 

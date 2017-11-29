@@ -1,6 +1,8 @@
 @charset "utf-8";
 
-
+html,body{
+  overflow:hidden;
+}
 .ie{
     position: fixed;
     left: 50%;
@@ -11,7 +13,7 @@
     border:2px solid #3e3a39;
     color:#3e3a39;
     font-size: 2rem;
-    font-family: 'GonganB';
+    font-family: 'GonganB','Nanum GothicB', sans-serif;
     line-height: 4rem;
     padding: 15px;
     z-index: 999;
@@ -26,20 +28,20 @@
  position: fixed;  
  display: block;    
  background-color: #fff;  
- z-index: 99;  
+ z-index: 1001;  
  text-align: center; } 
  #box{
 position: absolute; 
 width:20%;
 height:20%; 
- top: 50%;  
+ top: 40%;  
  left: 50%; 
  transform: translate(-50%, -50%);
- z-index: 100;
+ z-index: 1002;
  }
   
 #loading-image {  
- z-index: 200; }
+ z-index: 1003; }
 
 
 
@@ -51,7 +53,7 @@ height:20%;
 }
 .back{
   float: left;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #3e3a39;
   padding-right: 30px;
 }
@@ -62,14 +64,14 @@ height:20%;
   position: fixed;
   bottom: 5%;
   left: 50%;
-  font-size: 3rem; 
+  font-size: 4rem; 
   color: #3e3a39;
   z-index: 100;
   cursor: pointer;
 }
 .tooltip{
   float: left;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #3e3a39;
   z-index: 100
 }
@@ -80,7 +82,7 @@ height:20%;
     border:2px solid #3e3a39;
     color:#3e3a39;
     font-size: 1.5rem;
-    font-family: 'GonganL';
+    font-family: 'GonganL','Nanum GothicR', sans-serif;
     line-height: 2rem;
     padding: 15px;
     position: absolute;
@@ -99,7 +101,7 @@ height:20%;
 div.gif img{
   cursor: pointer !important;
 }
-    img {
+    img.la {
    max-width: 100%; /* 이미지의 최대사이즈 */
     min-width: 100%;
     width /***/: auto; /* only IE8 */
@@ -226,89 +228,6 @@ div.gif img{
       transition:all 0.4s;
       cursor: pointer !important;
     }
-/*
-@keyframes s1 {
-  0% {
-    bottom:28%;
-  }
-  50%{
-    bottom:40%;
-  }
-  100% {
-    bottom:28%;
-  }
-}
-@keyframes s2 {
-  0% {
-    left:20%;
-    bottom:-3%;
-  }
-  50%{
-    left:40%;
-    bottom:5%;
-  }
-  100% {
-    left:20%;
-    bottom:-3%;
-  }
-}
-
-@keyframes s4 {
-  0% {
-      right:20%;
-      top:30%;
-  }
-  50%{
-      right:5%;
-      top:50%;
-  }
-  100% {
-     right:20%;
-      top:30%;
-  }
-}
- @keyframes s5 {
-  0% {
-      right:10%;
-      top:20%;
-  }
-  50%{
-      right:2%;
-      top:20%;
-  }
-  100% {
-      right:10%;
-      top:20%;
-  }
-}
-@keyframes s3 {
-  0% {
-    width:12%;
-    top:38%;
-      left:47%;
-  }
-  25%{
-    width:11%;
-     top:45%;
-    left:55%;
-  }
-  50%{
-    width:12%;
-       top:50%;
-    left:45%;
-
-  }
-  75%{
-    width:11%;
-    top:45%;
-    left:55%;
-  }
-  100% {
-    width:12%;
-     top:38%;
-      left:47%;
-  }
-}*/
 
 
 

@@ -42,8 +42,14 @@ $(document).ready(
             idx = $target.index(),
             section = $contents.eq(idx),
             offsetTop = section.offset().top;
-        console.log(this);
         $(this).addClass('tab-act');
+        $doc.stop().animate({ scrollTop :offsetTop }, 500);
+        // console.log(section, offsetTop);
+        return false;
+      });
+      
+      $scroll_down.on('click', function (e) {
+        var offsetTop = $('#film01').offset().top;
         $doc.stop().animate({ scrollTop :offsetTop }, 500);
 
         return false;
@@ -52,7 +58,6 @@ $(document).ready(
       $(window).scroll(function(){
         var scltop = $(window).scrollTop();
         $.each($contents, function(idx, item){
-          console.log(idx, item);
           var $target = $contents.eq(idx),
               i = $target.index(),
               targetTop = $target.offset().top;

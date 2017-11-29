@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="short icon" type="" href="http://hongiksidi.com/wow2015/wp-content/uploads/2015/11/icon.png">
   <title>2017 와우영상제</title>
-  <link rel="stylesheet" type="" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
@@ -44,14 +44,15 @@
           <li><a class="keynote-tab" href="#keynote"></a></li>
           <li><a class="main-poster-tab" href="#main-poster"></a></li>
           <li><a class="eve-festival-tab" href="#eve-festival"></a></li>
+          <li><a class="eve-festival-img-tab" href="#eve-festival-img"></a></li>
         </ul>
         <div class="wow-thumb-img">
           <img class="left" src="./imgs/wow-thumb01.svg" alt="wow메뉴 대표이미지">
-          <img class="right" src="./imgs/wow-thumb02.svg" alt="wow메뉴 대표이미지">
+          <img class="right first" src="./imgs/wow-thumb02.svg" alt="wow메뉴 대표이미지">
           <img class="left" src="./imgs/wow-thumb03.svg" alt="wow메뉴 대표이미지">
-          <img class="right" src="./imgs/wow-thumb04.svg" alt="wow메뉴 대표이미지">
-          <img class="left" src="./imgs/wow-thumb05.svg" alt="wow메뉴 대표이미지">
-          <img class="right" src="./imgs/wow-thumb06.svg" alt="wow메뉴 대표이미지">
+          <img class="right second" src="./imgs/wow-thumb04.svg" alt="wow메뉴 대표이미지">
+          <img class="left third" src="./imgs/wow-thumb05.svg" alt="wow메뉴 대표이미지">
+          <img class="right fourth" src="./imgs/wow-thumb06.svg" alt="wow메뉴 대표이미지">
         </div>
         <div class="content-wrapper">
           <div id="keynote" class="scroll">
@@ -71,8 +72,13 @@
           <div id="eve-festival" class="scroll">
             <div class="detail-content">
               <h2><span>03</span> 전야제</h2>
-              <!-- <img src="./imgs/eve-festival.png" alt="전야제 포스터"> -->
               <p>올해 와우영상제(WOWFF: Wow Film Festival)에서는 상영회 전날인 12월 21일 목요일, 전야제(前夜祭)가 열립니다. 와우영상제 사상 최초로 열리는 이번 전야제는, 다음날 상영될 작품들의 티저를 감상하며 감독, 배우, 관객이 다함께 영상제의 시작을 축하하는 자리입니다. 기존의 연사초청 세미나의 다소 일방적이었던 소통을 개선하기 위해, 간단한 다과와 함께 영상 업계에서 활발히 활동중인 분들을 게스트로 초청하여 대화의 장을 마련하고자 합니다. 공간 또한 ‘강연’보다는 ‘대화’에 적합한 보다 오픈된 곳에서 진행될 예정입니다. 제 27회 와우영상제의 포문을 함께 열어주실 분들을 기다리고 있겠습니다.</p>
+            </div>
+          </div>
+          <div id="eve-festival-img" class="scroll">
+            <div class="detail-content">
+              <h2><span>04</span> 전야제 포스터</h2>
+              <img src="./imgs/eve-festival.png" alt="전야제 포스터">
             </div>
           </div>
         </div>
@@ -91,8 +97,10 @@
     </a>
   </footer>
   <script src="./js/jquery.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
+  <script src="./js/scrollMagic.js"></script>
+  <script src="./js/scrollMagicDebug.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/scroll.js"></script>
 

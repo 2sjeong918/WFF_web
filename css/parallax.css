@@ -5,10 +5,11 @@
 #sponsor ul,
 #keynote p,
 #main-poster img,
-#eve-festival p {
+#eve-festival p,
+#eve-festival-img img{
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in;
 }
 #wow p.fade-in{
   transform: translateY(0);
@@ -33,4 +34,92 @@
 #eve-festival p.fade-in{
   transform: translateY(0);
   opacity: 1;
+}
+#eve-festival-img img.fade-in{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* 데스크탑 */
+@media screen and (min-width: 800px){
+
+  .about-content-bg{
+    -ms-background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                      url('../imgs/about-bg-m.svg');
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                      url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.97 11.97"><defs><style>.cls-1{fill:none;stroke:#231916;stroke-miterlimit:10;}</style></defs><title>about-bg-m</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" x="2.99" y="2.99" width="5.99" height="5.99"/><polyline class="cls-1" points="11.97 2.99 8.97 2.99 8.97 0"/><polyline class="cls-1" points="2.99 0 2.99 2.99 0 2.99"/><polyline class="cls-1" points="8.97 11.97 8.97 8.97 11.97 8.97"/><polyline class="cls-1" points="0 8.97 2.99 8.97 2.99 11.97"/></g></g></svg>');
+    background-position: top;
+    background-attachment: fixed;
+    background-size: 2.5%;
+    transition: all 0.5s ease-in-out;
+  }
+  .about-content-bg-act{
+    -ms-background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url('../imgs/about-bg-m.svg');
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.97 11.97"><defs><style>.cls-1{fill:none;stroke:#fff101;stroke-miterlimit:10;}</style></defs><title>about-bg-m</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" x="2.99" y="2.99" width="5.99" height="5.99"/><polyline class="cls-1" points="11.97 2.99 8.97 2.99 8.97 0"/><polyline class="cls-1" points="2.99 0 2.99 2.99 0 2.99"/><polyline class="cls-1" points="8.97 11.97 8.97 8.97 11.97 8.97"/><polyline class="cls-1" points="0 8.97 2.99 8.97 2.99 11.97"/></g></g></svg>');
+    background-position: top;
+    background-attachment: fixed;
+    background-size: 2.5%;
+  }
+
+  .wow-content-bg {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../imgs/wow-bg.svg");
+    transition: all 0.3s ease-in;
+  }
+  .wow-content-bg.wow-content-bg-act {
+    background-image: url("../imgs/wow-bg-act.svg");
+  }
+
+  @keyframes imganimation {
+    0% { 
+      transform: rotate(0) ;
+      opacity: 0;
+    }
+    100% { 
+      transform: rotate(360deg) ;
+      opacity: 1;
+    }
+  }
+  @keyframes focusanimation {
+    0% { 
+      transform: rotate(0) ;
+      opacity: 0;
+    }
+    100% { 
+      transform: rotate(360deg) ;
+      background-image: radial-gradient(#fff101 0%, #ffffff 50%);
+      opacity: 1;
+    }
+  }
+  .wow-thumb-img img{
+    animation: 1s ease-in-out 1 imganimation;
+    animation-direction: alternate;
+  }
+  .wow-thumb-img .img-act{
+    animation: 1s ease-in-out 1 focusanimation;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+
+}
+
+/* 모바일 */
+@media screen and (max-width:799px){
+
+  .about-content {
+    background: #fff;
+    transition: all 0.1s ease-in;
+  }
+  .about-content.scroll-bg{
+    background: #fff101;
+  }
+
+  .wow-content {
+    background: #fff;
+    transition: all 0.1s ease-in;
+  }
+  .wow-content.scroll-bg{
+    background: #fff101;
+  }
 }
