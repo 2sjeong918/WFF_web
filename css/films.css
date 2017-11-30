@@ -3,6 +3,9 @@
 .menubar-container .menubar-w {
   background: #fff;
 }
+.films-content .tab-w li a{
+  border-top: 3px solid #fff;
+}
 .films-footer .fa{
   color: #fff;
 }
@@ -67,16 +70,16 @@
 @keyframes scrollcolor {
   0% { 
     color: #fff101;
-    bottom: 14%
+    bottom: 15%
   }
   50% { color: #ffffff; }
   100% { 
     color: #fff101;
-    bottom: 10%
+    bottom: 9%
   }
 }
 .scroll-down {
-  font-size: 7rem;
+  font-size: 9rem;
   position: absolute;
   bottom: 12%;
   cursor: pointer;

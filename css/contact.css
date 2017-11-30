@@ -22,7 +22,7 @@
 .contact-detail dt, .contact-detail span{
   font-family: 'GonganB', 'Nanum GothicB', sans-serif;
 }
-.contact-detail dd a{
+.contact-detail a{
   color: #3e3a39;
 }
 

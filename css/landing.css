@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+html,body{
+  overflow:hidden;
+}
+.ie{
+    position: fixed;
+    left: 50%;
+    top: 50%;   
+    transform: translate(-50%, -50%);
+    width: auto;
+    background-color:#fff;
+    border:2px solid #3e3a39;
+    color:#3e3a39;
+    font-size: 2rem;
+    font-family: 'GonganB','Nanum GothicB', sans-serif;
+    line-height: 4rem;
+    padding: 15px;
+    z-index: 999;
+    display:none;
+
+}
+#loading {
+ width: 100%;  
+ height: 100%;  
+ top: 0px;
+ left: 0px;
+ position: fixed;  
+ display: block;    
+ background-color: #fff;  
+ z-index: 1001;  
+ text-align: center; } 
+ #box{
+position: absolute; 
+width:20%;
+height:20%; 
+ top: 40%;  
+ left: 50%; 
+ transform: translate(-50%, -50%);
+ z-index: 1002;
+ }
+  
+#loading-image {  
+ z-index: 1003; }
+
+
+
+
+.footerleft{
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+}
+.back{
+  float: left;
+  font-size: 4rem;
+  color: #3e3a39;
+  padding-right: 30px;
+}
+.white{
+  color: #727171 !important;
+}
+.sound{
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  font-size: 4rem; 
+  color: #3e3a39;
+  z-index: 100;
+  cursor: pointer;
+}
+.tooltip{
+  float: left;
+  font-size: 4rem;
+  color: #3e3a39;
+  z-index: 100
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color:#fff;
+    border:2px solid #3e3a39;
+    color:#3e3a39;
+    font-size: 1.5rem;
+    font-family: 'GonganL','Nanum GothicR', sans-serif;
+    line-height: 2rem;
+    padding: 15px;
+    position: absolute;
+    z-index: 999;
+    bottom: 120%;
+    left: 50%;
+
+    word-break: keep-all;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+div.gif img{
+  cursor: pointer !important;
+}
+    img.la {
+   max-width: 100%; /* 이미지의 최대사이즈 */
+    min-width: 100%;
+    width /***/: auto; /* only IE8 */
+    height: auto;
+    vertical-align: bottom;
+    }
+    .gif, .svg, .png{
+      position: absolute;
+
+    }
+    .firework{
+      width:33%;
+      left:18%;
+      top:1%;
+      cursor:pointer;
+    }
+    .night{
+      width:25%;
+      left:45%;
+      bottom:5%;
+    }
+    .particle{
+      width:25%;
+      left:1%;
+      top:10%;
+    }
+    .diamond{
+      width:10%;
+      left:50%;
+      top:15%;
+    }
+    .particle1{
+      width:15%;
+      right:20%;
+      top:35%;
+    }
+    .dot{
+      width:10%;
+      left:14%;
+      bottom:-5%;
+    }
+    .grid{
+      width:10%;
+      top:10%;
+      right:10%;
+    }
+    .stripe{
+      width:13%;
+      top:-30% !important;
+      right:20%;
+    }
+    .stripe2{
+      width:6%;
+      bottom:5%;
+      right:6%;
+    }
+    .stripe3{
+      width:7%;
+      bottom:18%;
+      left:30%;
+    }
+    .night2{
+      width:8%;
+      bottom:-3%;
+      right:20%;
+    }
+    .grid2{
+      width:25%;
+      bottom:25%;
+      left:20%;
+    }
+    .shield{
+      width:15%;
+      left:0;
+      bottom:18%;
+    }
+    .shield2{
+      width:5%;
+      bottom:10%;
+      right:0;
+    }
+    .s1{
+      width:4%;
+      bottom: 20%;
+      right: 13%;
+    }
+    .s2{
+      width:12%;
+      top:40%;
+      left:53%;
+      animation: s3 20s infinite;
+    }
+    .s3{
+      width:5%;
+      bottom:33%;
+      left:7%;
+      animation: s1 10s infinite;
+    }
+    .s4{
+      width:7%;
+      left:20%;
+      bottom:-3%;
+      animation: s2 7s infinite;
+    }
+    .s5{
+      width:5%;
+      bottom:0;
+      right:17%;
+    }
+    .s6{
+      width:1%;
+      right:10%;
+      top:20%;
+      animation: s5 2s ease-in infinite;
+    }
+    .s7{
+      width:5%;
+      right:20%;
+      top:30%;
+      animation: s4 6s infinite;
+    }
+    .gif:hover{
+      transform:scale(1.1);
+      transition:all 0.4s;
+      cursor: pointer !important;
+    }
+
+
+

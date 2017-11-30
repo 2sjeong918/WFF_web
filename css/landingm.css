@@ -1,0 +1,198 @@
+@charset "utf-8";
+html,body{
+  overflow:hidden;
+}
+#loading {
+ width: 100%;  
+ height: 100%;  
+ top: 0px;
+ left: 0px;
+ position: fixed;  
+ display: block;    
+ background-color: #fff;  
+ z-index: 1001;  
+ text-align: center; } 
+#box{
+position: absolute; 
+width:20%;
+height:20%; 
+ top: 50%;  
+ left: 50%; 
+ transform: translate(-50%, -50%);
+ z-index: 1002;
+ }
+  
+#loading-image {  
+ z-index: 1003; }
+
+
+.footerleft{
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+}
+.back{
+  float: left;
+  font-size: 4rem;
+  color: #3e3a39;
+  padding-right: 30px;
+}
+.white{
+  color: #727171 !important;
+}
+.sound{
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  font-size: 3rem; 
+  color: #3e3a39;
+  z-index: 100;
+  cursor: pointer;
+}
+.tooltip{
+  float: left;
+  font-size: 4rem;
+  color: #3e3a39;
+  z-index: 100
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color:#fff;
+    border:2px solid #3e3a39;
+    color:#3e3a39;
+    font-size: 1.5rem;
+    font-family: 'GonganL','Nanum GothicR', sans-serif;
+    line-height: 2rem;
+    padding: 15px;
+    position: absolute;
+    z-index: 999;
+    bottom: 120%;
+    left: 50%;
+
+    word-break: keep-all;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+   img.la {
+   max-width: 100%; /* 이미지의 최대사이즈 */
+    min-width: 100%;
+    width /***/: auto; /* only IE8 */
+    height: auto;
+    vertical-align: bottom;
+    }
+    .gif, .svg, .png{
+      position: fixed;
+
+    }
+    .firework{
+      width:70%;
+      left:10%;
+      top:18%;Z
+    }
+    .night{
+      width:70%;
+      left:5%;
+      bottom:3%;
+    }
+    .particle{
+      width:30%;
+      left:2%;
+      top:10%;
+    }
+    .diamond{
+      width:26%;
+      left:65%;
+      top:4%;
+    }
+    .particle1{
+      width:35%;
+      right:10%;
+      top:50%;
+    }
+    .dot{
+      width:20%;
+      left:70%;
+      bottom:30%;
+    }
+    .grid{
+      width:25%;
+      bottom:-5%;
+      right:50%;
+    }
+    .stripe{
+      width:20%;
+      top:-10% !important;
+      right:60%;
+    }
+    .stripe2{
+      width:12%;
+      bottom:5%;
+      right:6%;
+    }
+    .stripe3{
+      width:17%;
+      bottom:18%;
+      left:30%;
+    }
+    .night2{
+      width:15%;
+      bottom:46%;
+      left:1%;
+    }
+    .grid2{
+      width:40%;
+      bottom:25%;
+      left:10%;
+    }
+    .shield{
+      width:50%;
+      left:0;
+      bottom:40%;
+    }
+    .shield2{
+      width:15%;
+      bottom:40%;
+      right:3%;
+    }
+/*    .s1{
+      width:5%;
+      bottom: 30%;
+      right: 10%;
+    }*/
+   /* .s2{
+      width:62%;
+      top:50%;
+      right:5%;*/
+/*    }
+    .s3{
+      width:7%;
+      bottom:52%;
+      left:7%;
+    }*/
+/*    .s4{
+      width:20%;
+      left:10%;
+      bottom:20%;
+    }*/
+ /*   .s5{
+      width:80%;
+      bottom:10%;
+      right:17%;*/
+    
+/*    .s6{
+      width:30%;
+      right:5%;
+      top:20%;
+    }*/
+ /*   .s7{
+      width:20%;
+      right:20%;
+      top:30%;
+    }*/
+
+

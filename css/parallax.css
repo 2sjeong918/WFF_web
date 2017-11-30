@@ -8,8 +8,8 @@
 #eve-festival p,
 #eve-festival-img img{
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.3s ease-in;
+  transform: translateY(50px);
+  transition: all 0.4s ease-in;
 }
 #wow p.fade-in{
   transform: translateY(0);
@@ -84,12 +84,12 @@
   @keyframes focusanimation {
     0% { 
       transform: rotate(0) ;
-      opacity: 0;
+      /* opacity: 0; */
     }
     100% { 
       transform: rotate(360deg) ;
       background-image: radial-gradient(#fff101 0%, #ffffff 50%);
-      opacity: 1;
+      /* opacity: 1; */
     }
   }
   .wow-thumb-img img{

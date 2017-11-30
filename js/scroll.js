@@ -1,8 +1,10 @@
 (function(global, $, SM){
   'use strict';
+
+  // 배경이미지 변환
   $( window ).scroll(function() {
-    // $output.html( scrolling );
-    console.log('scrolling');
+
+    // console.log('scrolling');
     $('.about-content-bg').addClass('about-content-bg-act');
     $('.wow-content-bg').addClass('wow-content-bg-act');
     $('.films-content-bg').addClass('films-content-bg-act');
@@ -22,15 +24,13 @@
   $('.order-detail button').on('mouseenter mouseleave', function( event ) {
     $('.usb-content-bg').toggleClass( "usb-content-bg-act" );
   });
-
-  console.log(SM);
   
+
   var ctrl = new SM.Controller();
 
   // Scene 설정
   var scene_list = '#wow p, .committee-list, #sponsor ul, #keynote p, #main-poster img, #eve-festival p, #eve-festival-img img'.split(', ');
-  var act_list = '.wow-thumb-img img'.split(', ');
-  console.log(act_list);
+  // var act_list = '.wow-thumb-img img'.split(', ');
   scene_list.forEach(function (trigger_el, idx) {
     var scroll_el = trigger_el;
     var about_scene = new SM.Scene({

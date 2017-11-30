@@ -44,14 +44,12 @@ $(document).ready(
             offsetTop = section.offset().top;
         $(this).addClass('tab-act');
         $doc.stop().animate({ scrollTop :offsetTop }, 500);
-        // console.log(section, offsetTop);
         return false;
       });
       
       $scroll_down.on('click', function (e) {
         var offsetTop = $('#film01').offset().top;
         $doc.stop().animate({ scrollTop :offsetTop }, 500);
-
         return false;
       });
 
@@ -71,5 +69,39 @@ $(document).ready(
           } 
         })
       });
-      
+
+  
+  // 스크롤 시 다음 화면
+  var scrollEvent = false;
+  var count = 0;
+
+  $('html,body').on('mousewheel DOMMouseScroll', function (e) {
+    e.preventDefault();
+    var m = e.originalEvent.wheelDelta;
+    var sb = $(window).height();
+
+    if (m >= 1 && scrollEvent == false && count >= 1) {
+      console.log(count);
+      scrollEvent = true;
+      count--;
+      $("html, body").stop().animate({scrollTop :sb*count},
+        {duration:800, complete: function () {
+          scrollEvent = false;
+        }}
+      );
+    }
+    else if(m < 1 && scrollEvent ==false && count < 4) {
+      console.log(count);
+      scrollEvent = true;
+      count++;
+      $("html, body").stop().animate({scrollTop :sb*count},
+        {duration:700, complete: function () {
+          scrollEvent = false;
+        }}
+      );
+    }
+  })
+
+
+  
 })(this, this.jQuery);
