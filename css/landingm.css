@@ -95,9 +95,9 @@ height:20%;
       top:18%;Z
     }
     .night{
-      width:70%;
+      width:50%;
       left:5%;
-      bottom:3%;
+      bottom:10%;
     }
     .particle{
       width:30%;
@@ -106,7 +106,7 @@ height:20%;
     }
     .diamond{
       width:26%;
-      left:65%;
+      left:58%;
       top:4%;
     }
     .particle1{
@@ -126,7 +126,7 @@ height:20%;
     }
     .stripe{
       width:20%;
-      top:-10% !important;
+      top:-15% !important;
       right:60%;
     }
     .stripe2{
@@ -155,7 +155,7 @@ height:20%;
       bottom:40%;
     }
     .shield2{
-      width:15%;
+      width:13%;
       bottom:40%;
       right:3%;
     }
